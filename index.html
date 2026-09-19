@@ -1,0 +1,2956 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شركة الزعيم للتجارة الإلكترونية والخدمات والاشتراكات</title>
+
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Pro Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'Tajawal', 'sans-serif'],
+          },
+          colors: {
+            gold: {
+              100: '#FFF8D6',
+              200: '#FFF0B2',
+              300: '#F5E7A9',
+              400: '#E5C158',
+              500: '#D4AF37',
+              600: '#B38F24',
+              700: '#9A7B1C',
+              800: '#755B10',
+              900: '#4D3B07'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --gold-primary: #D4AF37;
+      --gold-light: #FFF0B2;
+      --gold-accent: #F5E7A9;
+      --gold-dark: #9A7B1C;
+      --gold-gradient: linear-gradient(135deg, #FFF0B2 0%, #D4AF37 50%, #9A7B1C 100%);
+      --black-deep: #0B0B0E;
+      --black-card: #141418;
+      --black-surface: #1B1B22;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      transition: background-color 0.22s ease, border-color 0.22s ease, color 0.18s ease, box-shadow 0.22s ease;
+    }
+
+    /* DARK THEME (Black & Pure Radiant Gold - NO GREEN) */
+    body.dark-mode-theme {
+      background-color: var(--black-deep);
+      background-image: radial-gradient(#202025 1px, transparent 1px);
+      background-size: 26px 26px;
+      color: #F3F4F6;
+    }
+
+    .dark-mode-theme .zaeem-card {
+      background: var(--black-card);
+      border: 1px solid #282834;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7);
+    }
+
+    .dark-mode-theme .zaeem-surface {
+      background: var(--black-surface);
+      border: 1px solid #2E2E3C;
+      color: #F3F4F6;
+    }
+
+    .dark-mode-theme .service-card-item {
+      background: #131317;
+      border: 1px solid #282835;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    .dark-mode-theme .service-card-item:hover {
+      border-color: var(--gold-primary);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 0 16px rgba(212, 175, 55, 0.22);
+    }
+
+    .dark-mode-theme .text-subtle {
+      color: #9CA3AF !important;
+    }
+
+    .dark-mode-theme .text-heading {
+      color: #FFFFFF !important;
+    }
+
+    /* LIGHT THEME (White, Black & Metallic Gold - NO GREEN) */
+    body.light-mode-theme {
+      background-color: #F8F9FA;
+      background-image: radial-gradient(#E2E5EB 1.2px, transparent 1.2px);
+      background-size: 26px 26px;
+      color: #111113;
+    }
+
+    .light-mode-theme .zaeem-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E6EF;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .light-mode-theme .zaeem-surface {
+      background: #F4F5F8;
+      border: 1px solid #DCE1EC;
+      color: #111113;
+    }
+
+    .light-mode-theme .service-card-item {
+      background: #FFFFFF;
+      border: 1.5px solid #E4E7EF;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .light-mode-theme .service-card-item:hover {
+      border-color: var(--gold-primary);
+      box-shadow: 0 12px 28px rgba(212, 175, 55, 0.2);
+    }
+
+    .light-mode-theme .text-subtle {
+      color: #4B5565 !important;
+    }
+
+    .light-mode-theme .text-heading {
+      color: #111113 !important;
+    }
+
+    /* GLOSSY BUTTONS */
+    .glossy-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 800;
+      font-family: 'Cairo', sans-serif;
+      cursor: pointer;
+      user-select: none;
+      overflow: hidden;
+      text-decoration: none;
+      border: 1px solid #32323a;
+      background: linear-gradient(180deg, #222228 0%, #131317 100%);
+      color: #E4E4E7;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .light-mode-theme .glossy-btn {
+      background: linear-gradient(180deg, #262832 0%, #111216 100%);
+      color: #FFFFFF;
+      border-color: #191B22;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+
+    .glossy-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+      transition: 0.5s ease;
+      pointer-events: none;
+    }
+
+    .glossy-btn:hover {
+      background: linear-gradient(135deg, #FFF0B2 0%, #D4AF37 50%, #9A7B1C 100%) !important;
+      color: #0B0B0D !important;
+      border-color: #FFF2B2 !important;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.55), 0 0 14px rgba(245, 231, 169, 0.4) !important;
+      transform: translateY(-2px);
+    }
+
+    .glossy-btn:hover::before {
+      left: 100%;
+    }
+
+    .glossy-btn:active {
+      background: linear-gradient(135deg, #FFF3C4 0%, #D4AF37 50%, #8A6A12 100%) !important;
+      color: #000000 !important;
+      border-color: #FFEE99 !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.65) !important;
+      transform: translateY(0);
+    }
+
+    .glossy-btn-secondary {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    .dark-mode-theme .glossy-btn-secondary {
+      border: 1px solid #313140 !important;
+      color: #D1D5DB !important;
+      background: #191922 !important;
+    }
+    .light-mode-theme .glossy-btn-secondary {
+      border: 1.5px solid #D7DCE6 !important;
+      color: #1A1F2C !important;
+      background: #FFFFFF !important;
+    }
+
+    /* Filter Chips */
+    .filter-chip {
+      padding: 7px 18px;
+      border-radius: 12px;
+      font-size: 12.5px;
+      font-weight: 800;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.22s ease;
+    }
+
+    .dark-mode-theme .filter-chip {
+      background: #171720;
+      color: #9CA3AF;
+      border: 1px solid #2B2B38;
+    }
+    .light-mode-theme .filter-chip {
+      background: #EDF0F6;
+      color: #4B5565;
+      border: 1px solid #D8DDE6;
+    }
+
+    .filter-chip.active {
+      background: linear-gradient(135deg, #FFF0B2 0%, #D4AF37 50%, #9A7B1C 100%) !important;
+      color: #0A0A0D !important;
+      border-color: #FFF2B2 !important;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.45);
+      font-weight: 900;
+    }
+
+    /* Sub-plan selector chips */
+    .plan-selector-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 11.5px;
+      font-weight: 800;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dark-mode-theme .plan-selector-pill {
+      background: #171720;
+      color: #A1A1AA;
+      border: 1px solid #2B2B38;
+    }
+    .light-mode-theme .plan-selector-pill {
+      background: #F1F3F8;
+      color: #4B5565;
+      border: 1px solid #DCE1EC;
+    }
+
+    .plan-selector-pill:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+      transform: translateY(-1px);
+    }
+
+    .plan-selector-pill.active {
+      background: linear-gradient(135deg, #FFF0B2 0%, #D4AF37 50%, #9A7B1C 100%) !important;
+      color: #0B0B0D !important;
+      border-color: #FFF2B2 !important;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+      font-weight: 900;
+    }
+
+    .gold-progress-bar {
+      background: linear-gradient(90deg, #9A7B1C 0%, #D4AF37 60%, #FFF0B2 100%);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    }
+
+    .zaeem-modal-overlay {
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Interactive KPI Cards (Turn gold on hover and click) */
+    .kpi-card-interactive {
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .kpi-card-interactive::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #FFF0B2 0%, #D4AF37 50%, #9A7B1C 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .kpi-card-interactive > * {
+      position: relative;
+      z-index: 1;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .kpi-card-interactive:hover {
+      transform: translateY(-4px);
+      border-color: #FFF2B2 !important;
+      box-shadow: 0 12px 30px rgba(212, 175, 55, 0.45), 0 0 16px rgba(245, 231, 169, 0.35) !important;
+    }
+
+    .kpi-card-interactive:hover::after {
+      opacity: 1;
+    }
+
+    .kpi-card-interactive:hover .text-subtle {
+      color: #2D2305 !important;
+    }
+
+    .kpi-card-interactive:hover .text-heading {
+      color: #0B0B0D !important;
+    }
+
+    .kpi-card-interactive:hover .kpi-gold-text {
+      color: #000000 !important;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+    }
+
+    .kpi-card-interactive:hover .kpi-click-hint {
+      opacity: 1 !important;
+      color: #1A1403 !important;
+    }
+
+    .kpi-card-interactive:active {
+      transform: translateY(-1px) scale(0.99);
+      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.5) !important;
+    }
+
+    /* Log Tab Buttons */
+    .log-tab-btn {
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      border: 1px solid #333340;
+      color: #A1A1AA;
+      background: #181820;
+      transition: all 0.2s;
+    }
+    .log-tab-btn.active {
+      background: linear-gradient(135deg, #FFF0B2 0%, #D4AF37 50%, #9A7B1C 100%) !important;
+      color: #0B0B0D !important;
+      border-color: #FFF2B2 !important;
+    }
+  </style>
+</head>
+
+<body class="dark-mode-theme min-h-screen px-3 py-6 sm:px-8 sm:py-8 flex flex-col items-center">
+
+  <!-- Security Gatekeeper: Password Screen -->
+  <div id="loginGatekeeper" class="fixed inset-0 z-[100] flex items-center justify-center p-4 zaeem-modal-overlay">
+    <div class="zaeem-card w-full max-w-md rounded-2xl p-6 sm:p-8 border-2 border-[#D4AF37] shadow-2xl text-center space-y-5">
+      
+      <!-- Brand Logo / Lock Header -->
+      <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#FFF0B2] to-[#D4AF37] text-black text-2xl mx-auto flex items-center justify-center shadow-lg">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+
+      <div>
+        <h2 class="text-base sm:text-lg font-black text-heading">
+          شركة الزعيم للخدمات والاشتراكات
+        </h2>
+        <p class="text-xs font-bold text-[#D4AF37] mt-1">
+          لوحة تحكم الإدارة المعتمدة - التحقق من الصلاحية
+        </p>
+      </div>
+
+      <!-- Password Form -->
+      <form id="loginForm" onsubmit="handleAdminLogin(event)" class="space-y-4 pt-1">
+        <div class="space-y-1.5 text-right">
+          <label class="block text-xs font-bold text-subtle">كلمة المرور الخاصة بالإدارة</label>
+          <div class="relative">
+            <input 
+              type="password" 
+              id="adminPasswordInput"
+              required
+              placeholder="أدخل كلمة المرور..."
+              class="w-full px-4 py-3 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-sm font-black tracking-widest text-center"
+            >
+            <button 
+              type="button" 
+              onclick="togglePasswordVisibility()" 
+              class="absolute left-3 top-1/2 -translate-y-1/2 text-subtle hover:text-[#D4AF37] text-sm"
+              tabindex="-1"
+            >
+              <i id="eyeIcon" class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Lockout countdown display -->
+        <div id="lockoutWarning" class="hidden p-3 rounded-xl bg-red-500/15 border border-red-500/40 text-xs font-bold text-red-400 space-y-1">
+          <div class="flex items-center justify-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>تم تجاوز 5 محاولات خاطئة!</span>
+          </div>
+          <div>
+            يرجى الانتظار: <span id="countdownTimer" class="font-black text-white text-sm">60</span> ثانية
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          id="loginSubmitBtn"
+          class="glossy-btn w-full !py-3 font-black text-sm"
+        >
+          <i class="fa-solid fa-key text-[#D4AF37]"></i>
+          <span>دخول لوحة التحكم</span>
+        </button>
+
+        <p id="attemptsNotice" class="text-[11px] text-subtle font-semibold">
+          المحاولات المتاحة: 5 محاولات قبل الإيقاف المؤقت
+        </p>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Header: Pure Black, Gold & White Theme (No Crowns) -->
+  <header class="w-full max-w-6xl mb-6">
+    <div class="zaeem-card p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+      
+      <!-- Brand Title (Pure Gold & Black/White) -->
+      <div class="flex items-center gap-3.5 self-start sm:self-auto">
+        <span style="display: inline-block; width: 6px; height: 38px; background: var(--gold-gradient); border-radius: 4px;"></span>
+        <div>
+          <h1 class="text-base sm:text-lg font-black tracking-tight text-heading">
+            شركة الزعيم للتجارة الإلكترونية والخدمات والاشتراكات
+          </h1>
+          <div class="flex items-center gap-2 mt-0.5">
+            <p class="text-xs font-bold text-[#D4AF37]">
+              لوحة الأسعار والتكاليف والأرباح المعتمدة (ر.س)
+            </p>
+            <span class="text-[10.5px] font-bold text-subtle flex items-center gap-1 bg-zinc-800/40 px-2 py-0.5 rounded border border-zinc-700/40">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
+              حفظ تلقائي فوري
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons Header -->
+      <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto justify-end">
+        
+        <!-- 1. Theme Switcher (الوضع الليلي) -->
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="glossy-btn !py-2 !px-3" title="تبديل الوضع النهاري / الليلي">
+          <i id="themeIcon" class="fa-solid fa-moon text-[#F5E7A9]"></i>
+          <span id="themeLabel">الوضع الليلي</span>
+        </button>
+
+        <!-- 2. Currency Selector Dropdown (العملة) -->
+        <div class="relative">
+          <button id="currencyBtn" onclick="toggleCurrencyDropdown(event)" class="glossy-btn !py-2 !px-3" title="تغيير عملة عرض الأسعار">
+            <i class="fa-solid fa-coins text-[#D4AF37]"></i>
+            <span id="activeCurrencyDisplay">ر.س (ريال)</span>
+            <i class="fa-solid fa-chevron-down text-[10px] text-zinc-400"></i>
+          </button>
+          
+          <div id="currencyMenu" class="hidden absolute left-0 mt-2 w-48 rounded-xl zaeem-card border border-[#D4AF37]/50 shadow-2xl z-50 overflow-hidden py-1">
+            <button type="button" onclick="selectCurrency('SAR')" class="w-full text-right px-3.5 py-2.5 text-xs font-black flex items-center justify-between hover:bg-[#D4AF37]/20 transition text-heading">
+              <span class="flex items-center gap-2"><span class="text-[#D4AF37]">🇸🇦</span> ريال سعودي</span>
+              <span class="text-subtle font-mono text-[11px]">ر.س</span>
+            </button>
+            <button type="button" onclick="selectCurrency('EGP')" class="w-full text-right px-3.5 py-2.5 text-xs font-black flex items-center justify-between hover:bg-[#D4AF37]/20 transition text-heading border-t border-zinc-500/10">
+              <span class="flex items-center gap-2"><span class="text-[#D4AF37]">🇪🇬</span> جنيه مصري</span>
+              <span class="text-subtle font-mono text-[11px]">ج.م</span>
+            </button>
+            <button type="button" onclick="selectCurrency('AED')" class="w-full text-right px-3.5 py-2.5 text-xs font-black flex items-center justify-between hover:bg-[#D4AF37]/20 transition text-heading border-t border-zinc-500/10">
+              <span class="flex items-center gap-2"><span class="text-[#D4AF37]">🇦🇪</span> درهم إماراتي</span>
+              <span class="text-subtle font-mono text-[11px]">د.إ</span>
+            </button>
+            <button type="button" onclick="selectCurrency('KWD')" class="w-full text-right px-3.5 py-2.5 text-xs font-black flex items-center justify-between hover:bg-[#D4AF37]/20 transition text-heading border-t border-zinc-500/10">
+              <span class="flex items-center gap-2"><span class="text-[#D4AF37]">🇰🇼</span> دينار كويتي</span>
+              <span class="text-subtle font-mono text-[11px]">د.ك</span>
+            </button>
+            <button type="button" onclick="selectCurrency('USD')" class="w-full text-right px-3.5 py-2.5 text-xs font-black flex items-center justify-between hover:bg-[#D4AF37]/20 transition text-heading border-t border-zinc-500/10">
+              <span class="flex items-center gap-2"><span class="text-[#D4AF37]">🇺🇸</span> دولار أمريكي</span>
+              <span class="text-subtle font-mono text-[11px]">$ USD</span>
+            </button>
+            <button type="button" onclick="selectCurrency('EUR')" class="w-full text-right px-3.5 py-2.5 text-xs font-black flex items-center justify-between hover:bg-[#D4AF37]/20 transition text-heading border-t border-zinc-500/10">
+              <span class="flex items-center gap-2"><span class="text-[#D4AF37]">🇪🇺</span> يورو</span>
+              <span class="text-subtle font-mono text-[11px]">€ EUR</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Activity Log Button (التحديثات) -->
+        <button onclick="openLogsModal()" class="glossy-btn !py-2 !px-3" title="سجل آخر التحديثات بتوقيت مصر">
+          <i class="fa-solid fa-clock-rotate-left text-[#D4AF37]"></i>
+          <span>التحديثات</span>
+        </button>
+
+        <!-- 4. Trash Bin Button with Badge (المحذوفات) -->
+        <button onclick="openTrashModal()" class="glossy-btn !py-2 !px-3 relative" title="سلة محذوفات الاشتراكات (30 يوماً)">
+          <i class="fa-solid fa-trash-can text-[#D4AF37]"></i>
+          <span>المحذوفات</span>
+          <span id="trashCountBadge" class="hidden absolute -top-1.5 -right-1.5 bg-[#D4AF37] text-black font-black text-[10px] w-5 h-5 rounded-full items-center justify-center shadow-md">0</span>
+        </button>
+
+        <!-- 5. Add Subscription Button (إضافة اشتراك) -->
+        <button onclick="openModal()" class="glossy-btn !py-2 !px-3 font-black" title="إضافة اشتراك جديد">
+          <i class="fa-solid fa-plus text-[#D4AF37]"></i>
+          <span>إضافة اشتراك</span>
+        </button>
+
+        <!-- 6. Export CSV Button (الإكسل) -->
+        <button onclick="exportToCSV()" class="glossy-btn !py-2 !px-3" title="تصدير جدول الأسعار كملف إكسيل">
+          <i class="fa-solid fa-file-excel text-[#D4AF37]"></i>
+          <span>تصدير إكسيل</span>
+        </button>
+
+        <!-- 7. Lockout / Exit Session Button (إنهاء الجلسة) -->
+        <button onclick="lockSystemSession()" class="glossy-btn !py-2 !px-3" title="إنهاء وقفل الجلسة">
+          <i class="fa-solid fa-arrow-right-from-bracket text-[#D4AF37]"></i>
+          <span>إنهاء الجلسة</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="w-full max-w-6xl space-y-5">
+
+    <!-- KPI Dashboard: Black & Gold Only (No Green) -->
+    <section class="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
+      
+      <!-- Total Subscriptions Count -->
+      <div onclick="openKpiDetailModal('count')" class="zaeem-card kpi-card-interactive p-4 rounded-2xl flex flex-col justify-between" title="انقر لعرض تفاصيل توزيع الباقات">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-subtle">عدد الاشتراكات</span>
+          <span class="kpi-click-hint text-[10px] font-black opacity-0 transition-opacity flex items-center gap-1">
+            <span>تفاصيل</span> <i class="fa-solid fa-arrow-up-left-from-circle text-[9px]"></i>
+          </span>
+        </div>
+        <div class="my-2">
+          <span class="text-2xl sm:text-3xl font-black text-heading" id="kpiTotalCount">0</span>
+        </div>
+        <div class="text-[11.5px] text-subtle font-semibold" id="kpiDurationBreakdown">
+          0 شهري • 0 سنوي
+        </div>
+      </div>
+
+      <!-- Average Profit Margin (Gold Accent) -->
+      <div onclick="openKpiDetailModal('margin')" class="zaeem-card kpi-card-interactive p-4 rounded-2xl flex flex-col justify-between" title="انقر لعرض التحليل المالي وهوامش الأرباح">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-subtle">متوسط الهامش</span>
+          <span class="kpi-click-hint text-[10px] font-black opacity-0 transition-opacity flex items-center gap-1">
+            <span>تفاصيل</span> <i class="fa-solid fa-arrow-up-left-from-circle text-[9px]"></i>
+          </span>
+        </div>
+        <div class="my-2">
+          <span class="text-2xl sm:text-3xl font-black text-[#D4AF37] kpi-gold-text" id="kpiAvgMargin">0.0%</span>
+        </div>
+        <div class="text-[11.5px] text-subtle font-semibold" id="kpiPricedServices">
+          على 0 خدمة مسعّرة
+        </div>
+      </div>
+
+      <!-- Max Unit Profit -->
+      <div onclick="openKpiDetailModal('profit')" class="zaeem-card kpi-card-interactive p-4 rounded-2xl flex flex-col justify-between" title="انقر لعرض لوحة شرف أعلى الأرباح">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-subtle">أعلى ربح للوحدة</span>
+          <span class="kpi-click-hint text-[10px] font-black opacity-0 transition-opacity flex items-center gap-1">
+            <span>تفاصيل</span> <i class="fa-solid fa-arrow-up-left-from-circle text-[9px]"></i>
+          </span>
+        </div>
+        <div class="my-2 flex items-baseline gap-1.5">
+          <span class="text-2xl sm:text-3xl font-black text-[#D4AF37] kpi-gold-text" id="kpiMaxProfit">0</span>
+          <span class="text-xs font-black text-subtle" id="kpiCurrencySymbol">ر.س</span>
+        </div>
+        <div class="text-[11.5px] text-subtle font-semibold truncate" id="kpiTopService">
+          -
+        </div>
+      </div>
+
+      <!-- Paused Services & Status -->
+      <div onclick="openKpiDetailModal('status')" class="zaeem-card kpi-card-interactive p-4 rounded-2xl flex flex-col justify-between" title="انقر لعرض تقرير توفر الخدمات">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-subtle">حالة الاشتراكات</span>
+          <span class="kpi-click-hint text-[10px] font-black opacity-0 transition-opacity flex items-center gap-1">
+            <span>تفاصيل</span> <i class="fa-solid fa-arrow-up-left-from-circle text-[9px]"></i>
+          </span>
+        </div>
+        <div class="my-2">
+          <span class="text-2xl sm:text-3xl font-black text-heading" id="kpiPausedCount">0</span>
+        </div>
+        <div class="text-[11.5px] font-bold text-subtle" id="kpiStatusDesc">
+          جاهزة ومتاحة للبيع
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Filters and Search Toolbar -->
+    <section class="zaeem-card p-4 rounded-2xl space-y-3">
+      
+      <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+        <!-- Search Input -->
+        <div class="relative flex-1 order-2 md:order-1">
+          <span class="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-subtle">
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          </span>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="ابحث باسم الخدمة (كانفا، شات جي بي تي، دوولينجو، أدوبي، لينكد إن...)"
+            oninput="renderSubscriptions()" 
+            class="w-full pr-10 pl-4 py-2.5 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-sm font-semibold placeholder-zinc-400"
+          >
+        </div>
+
+        <!-- Filter Chips: All, Monthly, Yearly, Lifetime, Available -->
+        <div class="flex flex-wrap items-center gap-1.5 order-1 md:order-2 self-start md:self-auto">
+          <button type="button" onclick="setPeriodFilter('ALL')" id="period-all" class="filter-chip active">الكل</button>
+          <button type="button" onclick="setPeriodFilter('شهري')" id="period-monthly" class="filter-chip">شهري</button>
+          <button type="button" onclick="setPeriodFilter('سنوي')" id="period-yearly" class="filter-chip">سنوي</button>
+          <button type="button" onclick="setPeriodFilter('مدى الحياة')" id="period-lifetime" class="filter-chip">مدى الحياة</button>
+          <button type="button" onclick="setPeriodFilter('متاح')" id="period-active" class="filter-chip">المتاح حالياً</button>
+          <button type="button" onclick="setPeriodFilter('موقوف')" id="period-paused" class="filter-chip">الموقوف حالياً</button>
+        </div>
+      </div>
+
+      <!-- Sort Selection -->
+      <div class="pt-1">
+        <div class="relative">
+          <select 
+            id="sortSelector" 
+            onchange="renderSubscriptions()"
+            class="w-full py-2.5 px-4 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-sm font-black cursor-pointer appearance-none text-right pr-10"
+          >
+            <option value="name">ترتيب: الاسم أبجدياً</option>
+            <option value="highest-price">ترتيب: أعلى سعر بيع (ر.س)</option>
+            <option value="lowest-price">ترتيب: أقل سعر بيع (ر.س)</option>
+            <option value="highest-profit">ترتيب: أعلى ربح للوحدة (ر.س)</option>
+            <option value="highest-margin">ترتيب: أعلى هامش ربح (%)</option>
+            <option value="highest-cost">ترتيب: أعلى تكلفة شراء</option>
+            <option value="lowest-cost">ترتيب: أقل تكلفة شراء</option>
+          </select>
+          <span class="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-subtle text-xs">
+            <i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Subscriptions List Container -->
+    <section id="subscriptionsContainer" class="space-y-3.5 min-h-[300px]">
+      <!-- Dynamically rendered via JS -->
+    </section>
+
+  </main>
+
+  <!-- Modal for Add / Edit Subscription -->
+  <div id="subscriptionModal" class="fixed inset-0 z-50 hidden zaeem-modal-overlay flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="zaeem-card w-full max-w-xl rounded-2xl border-2 border-[#D4AF37] shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="px-5 py-4 border-b border-zinc-500/20 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FFF0B2] to-[#D4AF37] flex items-center justify-center text-black font-black text-xs">
+            <i id="modalIcon" class="fa-solid fa-plus"></i>
+          </div>
+          <div>
+            <h3 id="modalTitle" class="text-sm sm:text-base font-black text-heading">إضافة اشتراك جديد</h3>
+            <span class="text-[11.5px] text-[#D4AF37] font-bold">شركة الزعيم - التسعير بالريال السعودي (ر.س)</span>
+          </div>
+        </div>
+        <button onclick="closeModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-subtle hover:text-[#D4AF37] transition">
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+
+      <!-- Modal Form Scrollable Body -->
+      <form id="subscriptionForm" onsubmit="handleFormSubmit(event)" class="p-5 space-y-4 overflow-y-auto">
+        <input type="hidden" id="editIndex" value="-1">
+
+        <!-- Name and Brand Icon Selector -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold mb-1 text-heading">اسم الخدمة / الاشتراك <span class="text-[#D4AF37]">*</span></label>
+            <input 
+              type="text" 
+              id="subName" 
+              required 
+              oninput="autoDetectBrandIcon(this.value)"
+              placeholder="مثال: كانفا pro، شات GPT Go، دوولينجو..."
+              class="w-full px-3.5 py-2.5 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-sm font-semibold"
+            >
+          </div>
+          <div>
+            <label class="block text-xs font-bold mb-1 text-heading">الأيقونة المقترحة</label>
+            <select 
+              id="subIconSelect"
+              class="w-full px-3 py-2.5 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-xs font-bold cursor-pointer"
+            >
+              <option value="canva">كانفا (Canva)</option>
+              <option value="chatgpt">شات جي بي تي (ChatGPT)</option>
+              <option value="gemini">جيمناي (Gemini)</option>
+              <option value="adobe">أدوبي (Adobe)</option>
+              <option value="linkedin">لينكد إن (LinkedIn)</option>
+              <option value="duolingo">دوولينجو (Duolingo)</option>
+              <option value="capcut">كب كات (CapCut)</option>
+              <option value="youtube">يوتيوب (YouTube)</option>
+              <option value="freepik">فري بيك (Freepik)</option>
+              <option value="microsoft">مايكروسوفت (Microsoft)</option>
+              <option value="windows">ويندوز (Windows)</option>
+              <option value="coursera">كورسيرا (Coursera)</option>
+              <option value="plus">تطبيقات بلس (Plus Apps)</option>
+              <option value="generic">شعار عام (Generic)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 1:1 Custom Image Upload Feature -->
+        <div class="p-3.5 rounded-xl zaeem-surface border border-zinc-500/20 space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block text-xs font-black text-heading">
+              <i class="fa-solid fa-image text-[#D4AF37] ml-1"></i> رفع صورة خاصة للاشتراك (مقاس 1:1 مربع)
+            </label>
+            <span class="text-[10.5px] text-subtle font-semibold">اختياري (تستبدل الأيقونة)</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div id="customImagePreviewContainer" class="w-12 h-12 rounded-xl bg-black/40 border border-zinc-700/50 flex items-center justify-center shrink-0 overflow-hidden relative">
+              <img id="customImagePreview" src="" alt="1:1" class="hidden w-full h-full object-cover">
+              <i id="customImagePlaceholderIcon" class="fa-solid fa-cloud-arrow-up text-subtle text-base"></i>
+            </div>
+            <div class="flex-1 space-y-1">
+              <input 
+                type="file" 
+                id="customImageInput" 
+                accept="image/*" 
+                onchange="handleCustomImageUpload(this)"
+                class="text-xs text-subtle file:mr-2 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-[#D4AF37]/20 file:text-[#D4AF37] hover:file:bg-[#D4AF37]/30 cursor-pointer w-full"
+              >
+              <input type="hidden" id="customImageData" value="">
+              <p class="text-[10px] text-subtle">يتم ضبط الصورة تلقائياً لنسبة 1:1 بجودة عالية ومحفوظة ذاتياً.</p>
+            </div>
+            <button 
+              type="button" 
+              onclick="removeCustomImage()" 
+              id="removeImageBtn"
+              class="hidden text-xs text-red-400 hover:text-red-300 font-bold px-2 py-1"
+            >
+              حذف الصورة
+            </button>
+          </div>
+        </div>
+
+        <!-- Period and Delivery Type -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold mb-1 text-heading">دورة الاشتراك <span class="text-[#D4AF37]">*</span></label>
+            <select 
+              id="subPeriodType"
+              class="w-full px-3 py-2.5 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-xs font-bold cursor-pointer"
+            >
+              <option value="شهري">شهري (Monthly)</option>
+              <option value="سنوي">سنوي (Yearly)</option>
+              <option value="4 شهور">4 شهور</option>
+              <option value="مدى الحياة">مدى الحياة (Lifetime)</option>
+              <option value="أخرى">أخرى</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold mb-1 text-heading">طبيعة الحساب / التسليم</label>
+            <input 
+              type="text" 
+              id="subDeliveryType"
+              placeholder="مثال: خاص على ايميلك، حساب جاهز، تفعيل فوري..."
+              class="w-full px-3.5 py-2.5 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-sm font-semibold"
+            >
+          </div>
+        </div>
+
+        <!-- Financial Matrix: Cost, Min Price, Selling Price (SAR) -->
+        <div class="grid grid-cols-3 gap-3 pt-1">
+          <div>
+            <label class="block text-[11.5px] font-bold mb-1 text-subtle">تكلفة الشراء (ر.س) <span class="text-[#D4AF37]">*</span></label>
+            <input 
+              type="number" 
+              id="subCost" 
+              step="0.5" 
+              min="0" 
+              required 
+              oninput="calcModalLiveMargins()"
+              placeholder="0"
+              class="w-full px-3 py-2 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-sm font-black text-center"
+            >
+          </div>
+
+          <div>
+            <label class="block text-[11.5px] font-bold mb-1 text-subtle">الحد الأدنى (ر.س) <span class="text-[#D4AF37]">*</span></label>
+            <input 
+              type="number" 
+              id="subMinPrice" 
+              step="0.5" 
+              min="0" 
+              required 
+              oninput="calcModalLiveMargins()"
+              placeholder="0"
+              class="w-full px-3 py-2 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-sm font-black text-center"
+            >
+          </div>
+
+          <div>
+            <label class="block text-[11.5px] font-bold mb-1 text-[#D4AF37]">سعر البيع (ر.س) <span class="text-[#D4AF37]">*</span></label>
+            <input 
+              type="number" 
+              id="subSellingPrice" 
+              step="0.5" 
+              min="0" 
+              required 
+              oninput="calcModalLiveMargins()"
+              placeholder="0"
+              class="w-full px-3 py-2 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-sm font-black text-center text-[#D4AF37]"
+            >
+          </div>
+        </div>
+
+        <!-- Live Margin Summary in Modal -->
+        <div class="p-3.5 rounded-xl zaeem-surface flex flex-wrap items-center justify-between gap-2 text-xs font-bold border border-zinc-500/20">
+          <div>
+            <span class="text-subtle">صافي الربح: </span>
+            <span id="modalPreviewProfit" class="text-[#D4AF37] font-black text-sm">0 ر.س</span>
+          </div>
+          <div>
+            <span class="text-subtle">هامش الربح: </span>
+            <span id="modalPreviewMargin" class="text-[#D4AF37] font-black text-sm">0.0%</span>
+          </div>
+          <div>
+            <span class="text-subtle">الربح عند الأدنى: </span>
+            <span id="modalPreviewMinProfit" class="font-bold text-heading">0 ر.س</span>
+          </div>
+        </div>
+
+        <!-- Status & Supplier -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold mb-1 text-heading">حالة توفر الاشتراك</label>
+            <select 
+              id="subStatusSelect"
+              class="w-full px-3 py-2.5 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-xs font-bold cursor-pointer"
+            >
+              <option value="active">متاح ومتوفر للبيع</option>
+              <option value="paused">⛔ موقوف حالياً</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold mb-1 text-heading">المورّد / رقم التواصل</label>
+            <input 
+              type="text" 
+              id="subSupplier" 
+              placeholder="المورد المعتمد أو رقم الحساب"
+              class="w-full px-3.5 py-2.5 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-sm font-semibold"
+            >
+          </div>
+        </div>
+
+        <!-- Notes -->
+        <div>
+          <label class="block text-xs font-bold mb-1 text-heading">ملاحظات / الضمان والتفاصيل</label>
+          <input 
+            type="text" 
+            id="subNotes" 
+            placeholder="مثال: ضمان كامل المدة، خاص على إيميلك..."
+            class="w-full px-3.5 py-2.5 rounded-xl zaeem-surface focus:outline-none focus:border-[#D4AF37] text-sm font-semibold"
+          >
+        </div>
+
+        <!-- Modal Actions -->
+        <div class="flex items-center justify-end gap-2.5 pt-3 border-t border-zinc-500/20">
+          <button type="button" onclick="closeModal()" class="glossy-btn glossy-btn-secondary">
+            إلغاء
+          </button>
+          <button type="submit" class="glossy-btn font-black">
+            <i class="fa-solid fa-check"></i>
+            <span id="saveBtnText">حفظ الاشتراك</span>
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Activity Log Modal (Egypt Time Africa/Cairo) -->
+  <div id="logsModal" class="fixed inset-0 z-50 hidden zaeem-modal-overlay flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="zaeem-card w-full max-w-2xl rounded-2xl border-2 border-[#D4AF37] shadow-2xl overflow-hidden my-auto max-h-[88vh] flex flex-col">
+      
+      <div class="px-5 py-4 border-b border-zinc-500/20 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FFF0B2] to-[#D4AF37] flex items-center justify-center text-black font-black text-xs">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-black text-heading">سجل آخر التحديثات</h3>
+            <span class="text-[11px] text-[#D4AF37] font-bold">توقيت جمهورية مصر العربية (GMT+2/3) • حفظ أسبوعي وأرشفة 30 يوماً</span>
+          </div>
+        </div>
+        <button onclick="closeLogsModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-subtle hover:text-[#D4AF37] transition">
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+
+      <div class="p-3 border-b border-zinc-500/20 flex items-center justify-between gap-2 flex-wrap bg-black/20">
+        <div class="flex items-center gap-1.5">
+          <button id="logTabActive" onclick="setLogViewTab('active')" class="log-tab-btn active">التحديثات النشطة (آخر 7 أيام)</button>
+          <button id="logTabArchive" onclick="setLogViewTab('archive')" class="log-tab-btn">أرشيف المحذوفات (حتى 30 يوماً)</button>
+        </div>
+        <button onclick="clearArchiveLogs()" class="text-xs text-subtle hover:text-red-400 font-bold px-2 py-1">
+          تنظيف الأرشيف
+        </button>
+      </div>
+
+      <div id="logsContainer" class="p-4 space-y-2.5 overflow-y-auto max-h-[60vh]">
+        <!-- Rendered via JS -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Trash Bin Modal (30 Days Retention) -->
+  <div id="trashModal" class="fixed inset-0 z-50 hidden zaeem-modal-overlay flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="zaeem-card w-full max-w-2xl rounded-2xl border-2 border-[#D4AF37] shadow-2xl overflow-hidden my-auto max-h-[88vh] flex flex-col">
+      
+      <div class="px-5 py-4 border-b border-zinc-500/20 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FFF0B2] to-[#D4AF37] flex items-center justify-center text-black font-black text-xs">
+            <i class="fa-solid fa-trash-can"></i>
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-black text-heading">سلة محذوفات الاشتراكات</h3>
+            <span class="text-[11px] text-[#D4AF37] font-bold">يمكنك استعادة أي اشتراك تم حذفه بالخطأ خلال 30 يوماً</span>
+          </div>
+        </div>
+        <button onclick="closeTrashModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-subtle hover:text-[#D4AF37] transition">
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+
+      <div id="trashItemsContainer" class="p-4 space-y-3 overflow-y-auto max-h-[60vh]">
+        <!-- Rendered via JS -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Custom Modal (NO alert/confirm) -->
+  <div id="confirmDeleteModal" class="fixed inset-0 z-50 hidden zaeem-modal-overlay flex items-center justify-center p-4">
+    <div class="zaeem-card w-full max-w-sm rounded-2xl border-2 border-red-500/50 p-5 text-center space-y-4 shadow-2xl">
+      <div class="w-12 h-12 rounded-2xl bg-red-500/15 border border-red-500/40 text-red-500 text-xl mx-auto flex items-center justify-center">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <div>
+        <h4 class="text-sm font-black text-heading mb-1">تأكيد نقل الاشتراك إلى المحذوفات</h4>
+        <p id="confirmDeleteMessage" class="text-xs text-subtle leading-relaxed">
+          هل أنت متأكد من رغبتك في نقل هذا الاشتراك إلى سلة المحذوفات؟
+        </p>
+      </div>
+      <div class="flex items-center justify-center gap-2.5 pt-2">
+        <button onclick="closeConfirmDeleteModal()" class="glossy-btn glossy-btn-secondary !py-2 !px-4 text-xs font-bold">
+          إلغاء التراجع
+        </button>
+        <button id="confirmDeleteBtn" class="glossy-btn !py-2 !px-4 text-xs font-black !bg-red-600/80 !border-red-500 text-white">
+          نعم، نقل للمحذوفات
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI Detail Modal -->
+  <div id="kpiDetailModal" class="fixed inset-0 z-50 hidden zaeem-modal-overlay flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="zaeem-card w-full max-w-xl rounded-2xl border-2 border-[#D4AF37] shadow-2xl overflow-hidden my-auto max-h-[90vh] flex flex-col">
+      <div class="px-5 py-4 border-b border-zinc-500/20 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FFF0B2] to-[#D4AF37] flex items-center justify-center text-black font-black text-xs">
+            <i id="kpiModalIcon" class="fa-solid fa-chart-pie"></i>
+          </div>
+          <div>
+            <h3 id="kpiModalTitle" class="text-sm sm:text-base font-black text-heading">تفاصيل الإحصائيات</h3>
+            <span id="kpiModalSubtitle" class="text-[11px] text-[#D4AF37] font-bold">تقرير تحليلي مباشر</span>
+          </div>
+        </div>
+        <button onclick="closeKpiDetailModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-subtle hover:text-[#D4AF37] transition">
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+
+      <div id="kpiModalBody" class="p-5 space-y-3.5 overflow-y-auto max-h-[65vh]">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="p-3 border-t border-zinc-500/20 flex justify-end shrink-0">
+        <button onclick="closeKpiDetailModal()" class="glossy-btn !py-1.5 !px-4 text-xs font-bold">
+          إغلاق
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastBox" class="fixed bottom-6 left-6 z-50 hidden items-center gap-3 px-5 py-3 rounded-xl zaeem-card border border-[#D4AF37] text-sm font-bold shadow-2xl">
+    <span class="text-[#D4AF37] text-lg">★</span>
+    <span id="toastMsg" class="text-heading">تمت العملية بنجاح</span>
+  </div>
+
+  <script>
+    // Master Grouped Catalog: One single entry per platform with sub-plans
+    const GROUPED_CATALOG = [
+      {
+        id: 'chatgpt',
+        platformName: 'شات جي بي تي (ChatGPT)',
+        icon: 'chatgpt',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'سنوي Go (خاص)',
+            period: 'سنوي',
+            delivery: 'خاص على إيميلك الشخصي',
+            cost: 195,
+            minPrice: 249,
+            sellingPrice: 269,
+            status: 'active',
+            notes: 'اشتراك رسمي خاص على إيميلك الشخصي لمدة سنة كاملة.'
+          },
+          {
+            planName: 'شهري Go (خاص)',
+            period: 'شهري',
+            delivery: 'خاص على إيميلك الشخصي',
+            cost: 18,
+            minPrice: 25,
+            sellingPrice: 29,
+            status: 'active',
+            notes: 'شات جي بي تي جو شهري خاص على إيميلك مباشرة.'
+          },
+          {
+            planName: 'شهري بلس (مشترك)',
+            period: 'شهري',
+            delivery: 'حساب مشترك عالي الجودة',
+            cost: 24,
+            minPrice: 35,
+            sellingPrice: 39,
+            status: 'active',
+            notes: 'وصول لـ GPT-4o وتوليد الصور ومميزات الذكاء الاصطناعي المتقدمة.'
+          }
+        ]
+      },
+      {
+        id: 'canva',
+        platformName: 'كانفا برو (Canva Pro)',
+        icon: 'canva',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'سنوي',
+            period: 'سنوي',
+            delivery: 'دعوة مباشرة على إيميل العميل',
+            cost: 5,
+            minPrice: 9,
+            sellingPrice: 10,
+            status: 'active',
+            notes: 'اشتراك كانفا برو السنوي الرسمي بـ 10 ريال فقط.'
+          },
+          {
+            planName: 'مدى الحياة',
+            period: 'مدى الحياة',
+            delivery: 'على إيميل العميل الخاص',
+            cost: 22,
+            minPrice: 35,
+            sellingPrice: 39,
+            status: 'active',
+            notes: 'اشتراك مدى الحياة مع ضمان معتمد خمس سنوات.'
+          }
+        ]
+      },
+      {
+        id: 'adobe',
+        platformName: 'حزمة أدوبي الإبداعية (Adobe Creative)',
+        icon: 'adobe',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: '4 شهور (خاص)',
+            period: '4 شهور',
+            delivery: 'خاص بحساب العميل',
+            cost: 105,
+            minPrice: 139,
+            sellingPrice: 149,
+            status: 'active',
+            notes: 'حساب خاص بكافة تطبيقات Creative Cloud وتحديثاتها وضمان كامل المدة.'
+          },
+          {
+            planName: 'شهري (جاهز)',
+            period: 'شهري',
+            delivery: 'حساب جاهز',
+            cost: 26,
+            minPrice: 35,
+            sellingPrice: 39,
+            status: 'paused',
+            notes: '⛔ موقوف حالياً.'
+          },
+          {
+            planName: 'سنوي (رسمي وخاص)',
+            period: 'سنوي',
+            delivery: 'رسمي وخاص على إيميلك',
+            cost: 220,
+            minPrice: 280,
+            sellingPrice: 300,
+            status: 'paused',
+            notes: '⛔ موقوف حالياً.'
+          }
+        ]
+      },
+      {
+        id: 'linkedin',
+        platformName: 'لينكد إن بريميوم (LinkedIn)',
+        icon: 'linkedin',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'بيزنس سنوي',
+            period: 'سنوي',
+            delivery: 'تفعيل حساب سنة كاملة',
+            cost: 195,
+            minPrice: 259,
+            sellingPrice: 279,
+            status: 'active',
+            notes: 'اشتراك بيزنس لمدة سنة كاملة. (عن طريق الرابط يزيد 80 ريال).'
+          },
+          {
+            planName: 'كارير سنوي',
+            period: 'سنوي',
+            delivery: 'تفعيل حساب سنة كاملة',
+            cost: 160,
+            minPrice: 209,
+            sellingPrice: 229,
+            status: 'active',
+            notes: 'اشتراك كارير المهني السنوي. (عن طريق الرابط يزيد 80 ريال).'
+          }
+        ]
+      },
+      {
+        id: 'duolingo',
+        platformName: 'دوولينجو (Duolingo)',
+        icon: 'duolingo',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'سوبر سنوي',
+            period: 'سنوي',
+            delivery: 'على حساب العميل الشخصي',
+            cost: 32,
+            minPrice: 45,
+            sellingPrice: 50,
+            status: 'active',
+            notes: 'تعلم لغات بدون إعلانات مع قلوب لا نهائية وضمان سنوي كامل.'
+          },
+          {
+            planName: 'ماكس سنوي (محادثات فيديو)',
+            period: 'سنوي',
+            delivery: 'على حساب العميل الشخصي',
+            cost: 58,
+            minPrice: 79,
+            sellingPrice: 89,
+            status: 'active',
+            notes: 'يشمل ميزة محادثات الفيديو الجماعية التفاعلية بالذكاء الاصطناعي.'
+          }
+        ]
+      },
+      {
+        id: 'capcut',
+        platformName: 'كب كات برو (CapCut Pro)',
+        icon: 'capcut',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'شهري (جاهز)',
+            period: 'شهري',
+            delivery: 'حساب جاهز مفعل',
+            cost: 18,
+            minPrice: 26,
+            sellingPrice: 30,
+            status: 'active',
+            notes: 'فتح كافة التأثيرات والانتقالات الاحترافية وميزات الذكاء الاصطناعي.'
+          },
+          {
+            planName: 'سنوي (خاص)',
+            period: 'سنوي',
+            delivery: 'خاص على إيميلك الشخصي',
+            cost: 135,
+            minPrice: 180,
+            sellingPrice: 200,
+            status: 'active',
+            notes: 'اشتراك سنوي كامل ومباشر على إيميلك الشخصي.'
+          }
+        ]
+      },
+      {
+        id: 'youtube',
+        platformName: 'يوتيوب بريميوم (YouTube Premium)',
+        icon: 'youtube',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'شهري',
+            period: 'شهري',
+            delivery: 'على إيميل العميل',
+            cost: 13,
+            minPrice: 17,
+            sellingPrice: 19,
+            status: 'paused',
+            notes: '⛔ موقوف حالياً.'
+          },
+          {
+            planName: 'سنوي',
+            period: 'سنوي',
+            delivery: 'على إيميل العميل',
+            cost: 82,
+            minPrice: 105,
+            sellingPrice: 119,
+            status: 'paused',
+            notes: '⛔ موقوف حالياً.'
+          }
+        ]
+      },
+      {
+        id: 'gemini',
+        platformName: 'جيمناي أدفانسد (Gemini Advanced)',
+        icon: 'gemini',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'سنوي (خاص)',
+            period: 'سنوي',
+            delivery: 'خاص على ايميلك الشخصي 🔴',
+            cost: 42,
+            minPrice: 59,
+            sellingPrice: 69,
+            status: 'active',
+            notes: 'اشتراك جيمناي السنوي المتقدم بحسابك الشخصي.'
+          }
+        ]
+      },
+      {
+        id: 'plus',
+        platformName: 'تطبيقات بلس (Plus Apps)',
+        icon: 'plus',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'سنوي (تفعيل فوري)',
+            period: 'سنوي',
+            delivery: 'تفعيل فوري ✨️',
+            cost: 32,
+            minPrice: 45,
+            sellingPrice: 50,
+            status: 'active',
+            notes: 'تطبيقات بلس مميزة مع تفعيل فوري وضمان كامل المدة.'
+          }
+        ]
+      },
+      {
+        id: 'freepik',
+        platformName: 'فري بيك بريميوم (Freepik Premium)',
+        icon: 'freepik',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'شهري (مشترك)',
+            period: 'شهري',
+            delivery: 'حساب مشترك سريع',
+            cost: 22,
+            minPrice: 34,
+            sellingPrice: 39,
+            status: 'active',
+            notes: 'تحميل غير محدود لملفات فيكتور، صور، وتصاميم فري بيك.'
+          }
+        ]
+      },
+      {
+        id: 'microsoft',
+        platformName: 'مايكروسوفت أوفيس 365 (Microsoft Office)',
+        icon: 'microsoft',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'سنوي',
+            period: 'سنوي',
+            delivery: 'ترخيص رسمي معتمد',
+            cost: 10,
+            minPrice: 17,
+            sellingPrice: 20,
+            status: 'active',
+            notes: 'يشمل وورد، إكسل، باوربوينت مع سعة تخزين سحابية.'
+          }
+        ]
+      },
+      {
+        id: 'windows',
+        platformName: 'ترخيص الويندوز الأصلي (Windows License)',
+        icon: 'windows',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'ترخيص سنوي',
+            period: 'سنوي',
+            delivery: 'مفتاح ترخيص رقمي رسمي',
+            cost: 20,
+            minPrice: 32,
+            sellingPrice: 39,
+            status: 'active',
+            notes: 'تفعيل رسمي أصلي للويندوز مع دعم التحديثات.'
+          }
+        ]
+      },
+      {
+        id: 'coursera',
+        platformName: 'كورسيرا بلس (Coursera Plus)',
+        icon: 'coursera',
+        supplier: 'شركة الزعيم',
+        activePlanIndex: 0,
+        plans: [
+          {
+            planName: 'سنوي (حساب خاص)',
+            period: 'سنوي',
+            delivery: 'على حسابك الخاص',
+            cost: 55,
+            minPrice: 79,
+            sellingPrice: 89,
+            status: 'active',
+            notes: 'وصول غير محدود لآلاف الكورسات والشهادات المعتمدة عالمياً.'
+          }
+        ]
+      }
+    ];
+
+    let subscriptions = [];
+    let currentPeriodFilter = 'ALL';
+    let activityLogs = [];
+    let trashBin = [];
+    let currentLogTab = 'active';
+    let deleteTargetId = null;
+
+    // Multi-Currency Exchange Rates relative to SAR base
+    const CURRENCIES = {
+      SAR: { code: 'SAR', symbol: 'ر.س', label: 'ر.س (ريال)', name: 'ريال سعودي', rate: 1.0, decimals: 0 },
+      EGP: { code: 'EGP', symbol: 'ج.م', label: 'ج.م (جنيه)', name: 'جنيه مصري', rate: 13.0, decimals: 0 },
+      AED: { code: 'AED', symbol: 'د.إ', label: 'د.إ (درهم)', name: 'درهم إماراتي', rate: 0.98, decimals: 0 },
+      KWD: { code: 'KWD', symbol: 'د.ك', label: 'د.ك (دينار)', name: 'دينار كويتي', rate: 0.082, decimals: 2 },
+      USD: { code: 'USD', symbol: '$', label: '$ (دولار)', name: 'دولار أمريكي', rate: 0.266, decimals: 1 },
+      EUR: { code: 'EUR', symbol: '€', label: '€ (يورو)', name: 'يورو', rate: 0.245, decimals: 1 }
+    };
+
+    let currentCurrency = 'SAR';
+
+    function getActiveCurrency() {
+      return CURRENCIES[currentCurrency] || CURRENCIES.SAR;
+    }
+
+    function convertFromSAR(sarAmount) {
+      const cur = getActiveCurrency();
+      const val = (Number(sarAmount) || 0) * cur.rate;
+      return cur.decimals > 0 ? Number(val.toFixed(cur.decimals)) : Math.round(val);
+    }
+
+    function formatCurrencyVal(sarAmount) {
+      const cur = getActiveCurrency();
+      const val = convertFromSAR(sarAmount);
+      return cur.decimals > 0 ? val.toFixed(cur.decimals) : val.toString();
+    }
+
+    function toggleCurrencyDropdown(e) {
+      if (e) e.stopPropagation();
+      const menu = document.getElementById('currencyMenu');
+      if (menu) menu.classList.toggle('hidden');
+    }
+
+    function selectCurrency(code) {
+      if (CURRENCIES[code]) {
+        currentCurrency = code;
+        localStorage.setItem('alzaeem_selected_currency', code);
+        const display = document.getElementById('activeCurrencyDisplay');
+        if (display) display.innerText = CURRENCIES[code].label;
+        
+        const kpiCurr = document.getElementById('kpiCurrencySymbol');
+        if (kpiCurr) kpiCurr.innerText = CURRENCIES[code].symbol;
+
+        const menu = document.getElementById('currencyMenu');
+        if (menu) menu.classList.add('hidden');
+
+        renderSubscriptions();
+        showToast(`✓ تم التحويل إلى عملة: ${CURRENCIES[code].name}`);
+      }
+    }
+
+    // Close currency dropdown on outside click
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('currencyMenu');
+      const btn = document.getElementById('currencyBtn');
+      if (menu && !menu.classList.contains('hidden')) {
+        if (!btn.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.add('hidden');
+        }
+      }
+    });
+
+    // Login & Lockout State
+    const ADMIN_PASS = 'Z-Admin2026';
+    let failedAttempts = 0;
+    let lockoutCountdownInterval = null;
+
+    // Egypt (Cairo) Date-Time Formatter
+    function formatEgyptDateTime(timestamp) {
+      if (!timestamp) return '-';
+      const date = new Date(timestamp);
+      return new Intl.DateTimeFormat('ar-EG', {
+        timeZone: 'Africa/Cairo',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true
+      }).format(date);
+    }
+
+    function addActivityLog(summary, details = '') {
+      const entry = {
+        id: Date.now().toString(),
+        timestamp: Date.now(),
+        summary: summary,
+        details: details
+      };
+      activityLogs.unshift(entry);
+      pruneActivityLogs();
+      saveSubscriptions();
+    }
+
+    // Auto-purge rotation: Active for 7 days, trash archive up to 30 days
+    function pruneActivityLogs() {
+      const now = Date.now();
+      const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
+
+      // Remove logs older than 30 days completely
+      activityLogs = activityLogs.filter(log => (now - log.timestamp) <= THIRTY_DAYS);
+
+      // Remove trash bin items older than 30 days
+      trashBin = trashBin.filter(item => (now - (item.deletedAt || 0)) <= THIRTY_DAYS);
+
+      updateTrashBadge();
+    }
+
+    function updateTrashBadge() {
+      const badge = document.getElementById('trashCountBadge');
+      if (badge) {
+        if (trashBin.length > 0) {
+          badge.innerText = trashBin.length;
+          badge.classList.remove('hidden');
+          badge.classList.add('flex');
+        } else {
+          badge.classList.add('hidden');
+          badge.classList.remove('flex');
+        }
+      }
+    }
+
+    function initializeApp() {
+      const storageKey = 'alzaeem_catalog_grouped_v3';
+      const logsKey = 'alzaeem_activity_logs_v1';
+      const trashKey = 'alzaeem_trash_bin_v1';
+
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        try {
+          subscriptions = JSON.parse(stored);
+        } catch (e) {
+          subscriptions = JSON.parse(JSON.stringify(GROUPED_CATALOG));
+        }
+      } else {
+        subscriptions = JSON.parse(JSON.stringify(GROUPED_CATALOG));
+        saveSubscriptions();
+      }
+
+      const storedLogs = localStorage.getItem(logsKey);
+      if (storedLogs) {
+        try { activityLogs = JSON.parse(storedLogs); } catch(e) { activityLogs = []; }
+      }
+
+      const storedTrash = localStorage.getItem(trashKey);
+      if (storedTrash) {
+        try { trashBin = JSON.parse(storedTrash); } catch(e) { trashBin = []; }
+      }
+
+      pruneActivityLogs();
+
+      const savedTheme = localStorage.getItem('alzaeem_theme_choice') || 'dark';
+      applyTheme(savedTheme);
+
+      // Restore saved currency
+      const savedCurr = localStorage.getItem('alzaeem_selected_currency') || 'SAR';
+      if (CURRENCIES[savedCurr]) {
+        currentCurrency = savedCurr;
+        const display = document.getElementById('activeCurrencyDisplay');
+        if (display) display.innerText = CURRENCIES[savedCurr].label;
+        const kpiCurr = document.getElementById('kpiCurrencySymbol');
+        if (kpiCurr) kpiCurr.innerText = CURRENCIES[savedCurr].symbol;
+      }
+
+      checkLockoutState();
+      checkSessionAuth();
+
+      renderSubscriptions();
+      calcModalLiveMargins();
+    }
+
+    function saveSubscriptions() {
+      localStorage.setItem('alzaeem_catalog_grouped_v3', JSON.stringify(subscriptions));
+      localStorage.setItem('alzaeem_activity_logs_v1', JSON.stringify(activityLogs));
+      localStorage.setItem('alzaeem_trash_bin_v1', JSON.stringify(trashBin));
+      updateTrashBadge();
+    }
+
+    function checkSessionAuth() {
+      const isAuthed = sessionStorage.getItem('alzaeem_admin_logged') === 'true';
+      const gatekeeper = document.getElementById('loginGatekeeper');
+      if (isAuthed && gatekeeper) {
+        gatekeeper.classList.add('hidden');
+      }
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const passInput = document.getElementById('adminPasswordInput');
+      const entered = (passInput ? passInput.value : '').trim();
+
+      if (entered === ADMIN_PASS) {
+        sessionStorage.setItem('alzaeem_admin_logged', 'true');
+        failedAttempts = 0;
+        localStorage.removeItem('alzaeem_failed_attempts');
+        document.getElementById('loginGatekeeper').classList.add('hidden');
+        showToast('✓ مرحباً بك! تم تسجيل الدخول بنجاح');
+      } else {
+        failedAttempts++;
+        localStorage.setItem('alzaeem_failed_attempts', failedAttempts.toString());
+        passInput.value = '';
+
+        if (failedAttempts >= 5) {
+          triggerOneMinuteLockout();
+        } else {
+          showToast(`⚠️ كلمة المرور غير صحيحة! المتبقي: ${5 - failedAttempts} محاولات`);
+          const notice = document.getElementById('attemptsNotice');
+          if (notice) notice.innerText = `محاولة خاطئة (${failedAttempts} من 5). يرجى التأكد من الرمز.`;
+        }
+      }
+    }
+
+    function triggerOneMinuteLockout() {
+      const lockUntil = Date.now() + 60000;
+      localStorage.setItem('alzaeem_lockout_until', lockUntil.toString());
+      runLockoutCountdown(60);
+    }
+
+    function checkLockoutState() {
+      const storedAttempts = parseInt(localStorage.getItem('alzaeem_failed_attempts') || '0');
+      failedAttempts = storedAttempts;
+
+      const lockUntil = parseInt(localStorage.getItem('alzaeem_lockout_until') || '0');
+      const now = Date.now();
+
+      if (lockUntil > now) {
+        const remainingSeconds = Math.ceil((lockUntil - now) / 1000);
+        runLockoutCountdown(remainingSeconds);
+      }
+    }
+
+    function runLockoutCountdown(seconds) {
+      const passInput = document.getElementById('adminPasswordInput');
+      const submitBtn = document.getElementById('loginSubmitBtn');
+      const warning = document.getElementById('lockoutWarning');
+      const timerEl = document.getElementById('countdownTimer');
+
+      if (passInput) passInput.disabled = true;
+      if (submitBtn) submitBtn.disabled = true;
+      if (warning) warning.classList.remove('hidden');
+
+      let current = seconds;
+      if (timerEl) timerEl.innerText = current;
+
+      clearInterval(lockoutCountdownInterval);
+      lockoutCountdownInterval = setInterval(() => {
+        current--;
+        if (timerEl) timerEl.innerText = current;
+
+        if (current <= 0) {
+          clearInterval(lockoutCountdownInterval);
+          localStorage.removeItem('alzaeem_lockout_until');
+          localStorage.setItem('alzaeem_failed_attempts', '0');
+          failedAttempts = 0;
+
+          if (passInput) passInput.disabled = false;
+          if (submitBtn) submitBtn.disabled = false;
+          if (warning) warning.classList.add('hidden');
+          const notice = document.getElementById('attemptsNotice');
+          if (notice) notice.innerText = 'تم رفع الإيقاف المؤقت، يمكنك المحاولة الآن.';
+        }
+      }, 1000);
+    }
+
+    function togglePasswordVisibility() {
+      const passInput = document.getElementById('adminPasswordInput');
+      const eyeIcon = document.getElementById('eyeIcon');
+      if (!passInput) return;
+
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+        if (eyeIcon) eyeIcon.className = 'fa-regular fa-eye-slash';
+      } else {
+        passInput.type = 'password';
+        if (eyeIcon) eyeIcon.className = 'fa-regular fa-eye';
+      }
+    }
+
+    function lockSystemSession() {
+      sessionStorage.removeItem('alzaeem_admin_logged');
+      const gatekeeper = document.getElementById('loginGatekeeper');
+      if (gatekeeper) gatekeeper.classList.remove('hidden');
+      showToast('🔒 تم قفل الجلسة');
+    }
+
+    function getBrandIconHtml(iconKey, customIconUrl = null) {
+      if (customIconUrl) {
+        return `
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 border border-[#D4AF37]/50 shadow-md overflow-hidden bg-black/40">
+            <img src="${customIconUrl}" alt="Icon" class="w-full h-full object-cover aspect-square">
+          </div>
+        `;
+      }
+
+      const baseClass = "w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 border text-lg sm:text-xl shadow-md transition-all";
+      const k = (iconKey || '').toLowerCase();
+
+      switch (k) {
+        case 'chatgpt':
+          return `
+            <div class="${baseClass} bg-[#10A37F]/15 border-[#10A37F]/40 text-[#10A37F]" title="ChatGPT">
+              <i class="fa-solid fa-brain text-xl"></i>
+            </div>
+          `;
+        case 'youtube':
+          return `
+            <div class="${baseClass} bg-red-600/15 border-red-500/40 text-red-500" title="YouTube Premium">
+              <i class="fa-brands fa-youtube text-2xl text-red-500"></i>
+            </div>
+          `;
+        case 'canva':
+          return `
+            <div class="${baseClass} bg-sky-500/15 border-sky-400/40 text-sky-400" title="Canva Pro">
+              <span class="font-black text-xl italic font-serif">C</span>
+            </div>
+          `;
+        case 'adobe':
+          return `
+            <div class="${baseClass} bg-red-700/15 border-red-600/40 text-red-500" title="Adobe Creative Cloud">
+              <span class="font-black text-sm tracking-tighter">Ai/Ps</span>
+            </div>
+          `;
+        case 'linkedin':
+          return `
+            <div class="${baseClass} bg-[#0A66C2]/15 border-[#0A66C2]/40 text-[#0A66C2]" title="LinkedIn Premium">
+              <i class="fa-brands fa-linkedin-in text-xl"></i>
+            </div>
+          `;
+        case 'duolingo':
+          return `
+            <div class="${baseClass} bg-amber-500/15 border-amber-400/40 text-amber-400" title="Duolingo">
+              <i class="fa-solid fa-feather-pointed text-xl"></i>
+            </div>
+          `;
+        case 'capcut':
+          return `
+            <div class="${baseClass} bg-zinc-800 border-zinc-600 text-white" title="CapCut Pro">
+              <i class="fa-solid fa-scissors text-lg text-[#D4AF37]"></i>
+            </div>
+          `;
+        case 'gemini':
+          return `
+            <div class="${baseClass} bg-gradient-to-br from-indigo-500/20 to-sky-400/20 border-indigo-400/40 text-indigo-400" title="Google Gemini">
+              <i class="fa-solid fa-wand-magic-sparkles text-lg text-[#F5E7A9]"></i>
+            </div>
+          `;
+        case 'plus':
+          return `
+            <div class="${baseClass} bg-amber-500/15 border-[#D4AF37]/50 text-[#D4AF37]" title="تطبيقات بلس">
+              <i class="fa-solid fa-gem text-lg text-[#D4AF37]"></i>
+            </div>
+          `;
+        case 'freepik':
+          return `
+            <div class="${baseClass} bg-blue-600/15 border-blue-400/40 text-blue-400" title="Freepik Premium">
+              <i class="fa-solid fa-layer-group text-lg"></i>
+            </div>
+          `;
+        case 'microsoft':
+          return `
+            <div class="${baseClass} bg-blue-500/15 border-blue-400/40 text-blue-400" title="Microsoft 365">
+              <i class="fa-brands fa-microsoft text-xl"></i>
+            </div>
+          `;
+        case 'windows':
+          return `
+            <div class="${baseClass} bg-sky-500/15 border-sky-400/40 text-sky-400" title="Windows">
+              <i class="fa-brands fa-windows text-xl"></i>
+            </div>
+          `;
+        case 'coursera':
+          return `
+            <div class="${baseClass} bg-blue-700/15 border-blue-500/40 text-blue-400" title="Coursera">
+              <i class="fa-solid fa-graduation-cap text-lg"></i>
+            </div>
+          `;
+        case 'generic':
+        default:
+          return `
+            <div class="${baseClass} bg-[#D4AF37]/15 border-[#D4AF37]/40 text-[#D4AF37]" title="الخدمة">
+              <i class="fa-solid fa-bolt text-lg"></i>
+            </div>
+          `;
+      }
+    }
+
+    function autoDetectBrandIcon(val) {
+      if (!val) return;
+      const text = val.toLowerCase();
+      const select = document.getElementById('subIconSelect');
+      if (!select) return;
+
+      if (text.includes('chat') || text.includes('gpt') || text.includes('شات')) {
+        select.value = 'chatgpt';
+      } else if (text.includes('canva') || text.includes('كانفا')) {
+        select.value = 'canva';
+      } else if (text.includes('adobe') || text.includes('أدوبي') || text.includes('ادوبي') || text.includes('فوتوشوب')) {
+        select.value = 'adobe';
+      } else if (text.includes('linkedin') || text.includes('لينكد')) {
+        select.value = 'linkedin';
+      } else if (text.includes('duolingo') || text.includes('دوولينجو') || text.includes('دولينجو')) {
+        select.value = 'duolingo';
+      } else if (text.includes('capcut') || text.includes('كب كات') || text.includes('كاب كات')) {
+        select.value = 'capcut';
+      } else if (text.includes('youtube') || text.includes('يوتيوب')) {
+        select.value = 'youtube';
+      } else if (text.includes('gemini') || text.includes('جيمناي')) {
+        select.value = 'gemini';
+      } else if (text.includes('بلس') || text.includes('plus')) {
+        select.value = 'plus';
+      } else if (text.includes('freepik') || text.includes('فري بيك') || text.includes('فريبيك')) {
+        select.value = 'freepik';
+      } else if (text.includes('office') || text.includes('أوفيس') || text.includes('اوفيس') || text.includes('مايكروسوفت')) {
+        select.value = 'microsoft';
+      } else if (text.includes('windows') || text.includes('ويندوز')) {
+        select.value = 'windows';
+      } else if (text.includes('coursera') || text.includes('كورسيرا')) {
+        select.value = 'coursera';
+      }
+    }
+
+    // Custom 1:1 Image Upload handler
+    function handleCustomImageUpload(input) {
+      if (input.files && input.files[0]) {
+        const file = input.files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = new Image();
+          img.onload = function() {
+            // Crop and resize to 1:1 square canvas (max 200x200 for clean lightweight storage)
+            const canvas = document.createElement('canvas');
+            const size = 180;
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+
+            const minDim = Math.min(img.width, img.height);
+            const startX = (img.width - minDim) / 2;
+            const startY = (img.height - minDim) / 2;
+
+            ctx.drawImage(img, startX, startY, minDim, minDim, 0, 0, size, size);
+            const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+
+            setCustomImagePreview(dataUrl);
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function setCustomImagePreview(url) {
+      const previewImg = document.getElementById('customImagePreview');
+      const placeholder = document.getElementById('customImagePlaceholderIcon');
+      const hiddenInput = document.getElementById('customImageData');
+      const removeBtn = document.getElementById('removeImageBtn');
+
+      if (url) {
+        if (previewImg) { previewImg.src = url; previewImg.classList.remove('hidden'); }
+        if (placeholder) placeholder.classList.add('hidden');
+        if (hiddenInput) hiddenInput.value = url;
+        if (removeBtn) removeBtn.classList.remove('hidden');
+      } else {
+        if (previewImg) { previewImg.src = ''; previewImg.classList.add('hidden'); }
+        if (placeholder) placeholder.classList.remove('hidden');
+        if (hiddenInput) hiddenInput.value = '';
+        if (removeBtn) removeBtn.classList.add('hidden');
+      }
+    }
+
+    function removeCustomImage() {
+      const fileInput = document.getElementById('customImageInput');
+      if (fileInput) fileInput.value = '';
+      setCustomImagePreview('');
+    }
+
+    function selectPlatformPlan(platformId, planIdx) {
+      const platform = subscriptions.find(p => p.id === platformId);
+      if (platform && platform.plans[planIdx]) {
+        platform.activePlanIndex = planIdx;
+        saveSubscriptions();
+        renderSubscriptions();
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.body.classList.contains('dark-mode-theme');
+      applyTheme(isDark ? 'light' : 'dark');
+    }
+
+    function applyTheme(theme) {
+      const body = document.body;
+      const html = document.documentElement;
+      const themeIcon = document.getElementById('themeIcon');
+      const themeLabel = document.getElementById('themeLabel');
+
+      if (theme === 'dark') {
+        html.classList.add('dark');
+        body.classList.remove('light-mode-theme');
+        body.classList.add('dark-mode-theme');
+        if (themeIcon) themeIcon.className = 'fa-solid fa-moon text-[#F5E7A9]';
+        if (themeLabel) themeLabel.innerText = 'الوضع الليلي';
+      } else {
+        html.classList.remove('dark');
+        body.classList.remove('dark-mode-theme');
+        body.classList.add('light-mode-theme');
+        if (themeIcon) themeIcon.className = 'fa-solid fa-sun text-[#D4AF37]';
+        if (themeLabel) themeLabel.innerText = 'الوضع النهاري';
+      }
+      localStorage.setItem('alzaeem_theme_choice', theme);
+    }
+
+    function setPeriodFilter(type) {
+      currentPeriodFilter = type;
+      document.getElementById('period-all').classList.toggle('active', type === 'ALL');
+      document.getElementById('period-monthly').classList.toggle('active', type === 'شهري');
+      document.getElementById('period-yearly').classList.toggle('active', type === 'سنوي');
+      document.getElementById('period-lifetime').classList.toggle('active', type === 'مدى الحياة');
+      document.getElementById('period-active').classList.toggle('active', type === 'متاح');
+      const pausedBtn = document.getElementById('period-paused');
+      if (pausedBtn) pausedBtn.classList.toggle('active', type === 'موقوف');
+      renderSubscriptions();
+    }
+
+    function computeProfit(cost, selling) {
+      return Number(selling) - Number(cost);
+    }
+
+    function computeMarginPercent(cost, selling) {
+      const c = Number(cost);
+      const s = Number(selling);
+      if (s <= 0) return 0;
+      return ((s - c) / s) * 100;
+    }
+
+    function getFilteredAndSorted() {
+      const query = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+      const sortBy = document.getElementById('sortSelector')?.value || 'name';
+
+      let list = subscriptions.filter(platform => {
+        const matchesQuery = 
+          platform.platformName.toLowerCase().includes(query) ||
+          (platform.supplier && platform.supplier.toLowerCase().includes(query)) ||
+          platform.plans.some(p => 
+            p.planName.toLowerCase().includes(query) ||
+            (p.delivery && p.delivery.toLowerCase().includes(query)) ||
+            (p.notes && p.notes.toLowerCase().includes(query))
+          );
+
+        let matchesPeriod = true;
+        if (currentPeriodFilter === 'ALL') {
+          matchesPeriod = true;
+        } else if (currentPeriodFilter === 'متاح') {
+          matchesPeriod = platform.plans.some(p => p.status !== 'paused');
+          if (matchesPeriod) {
+            const activeIdx = platform.plans.findIndex(p => p.status !== 'paused');
+            if (activeIdx !== -1 && platform.plans[platform.activePlanIndex || 0]?.status === 'paused') {
+              platform.activePlanIndex = activeIdx;
+            }
+          }
+        } else if (currentPeriodFilter === 'موقوف') {
+          matchesPeriod = platform.plans.some(p => p.status === 'paused');
+          if (matchesPeriod) {
+            const pauseIdx = platform.plans.findIndex(p => p.status === 'paused');
+            if (pauseIdx !== -1 && platform.plans[platform.activePlanIndex || 0]?.status !== 'paused') {
+              platform.activePlanIndex = pauseIdx;
+            }
+          }
+        } else {
+          matchesPeriod = platform.plans.some(p => p.period && p.period.includes(currentPeriodFilter));
+        }
+
+        return matchesQuery && matchesPeriod;
+      });
+
+      list.sort((a, b) => {
+        const planA = a.plans[a.activePlanIndex || 0] || a.plans[0];
+        const planB = b.plans[b.activePlanIndex || 0] || b.plans[0];
+
+        const profitA = computeProfit(planA.cost, planA.sellingPrice);
+        const profitB = computeProfit(planB.cost, planB.sellingPrice);
+        const marginA = computeMarginPercent(planA.cost, planA.sellingPrice);
+        const marginB = computeMarginPercent(planB.cost, planB.sellingPrice);
+
+        switch (sortBy) {
+          case 'highest-profit':
+            return profitB - profitA;
+          case 'highest-margin':
+            return marginB - marginA;
+          case 'highest-price':
+            return Number(planB.sellingPrice) - Number(planA.sellingPrice);
+          case 'lowest-price':
+            return Number(planA.sellingPrice) - Number(planB.sellingPrice);
+          case 'highest-cost':
+            return Number(planB.cost) - Number(planA.cost);
+          case 'lowest-cost':
+            return Number(planA.cost) - Number(planB.cost);
+          case 'name':
+          default:
+            return a.platformName.localeCompare(b.platformName, 'ar');
+        }
+      });
+
+      return list;
+    }
+
+    function updateKpiDashboard() {
+      let totalPlansCount = 0;
+      let monthlyCount = 0;
+      let yearlyCount = 0;
+      let totalProfit = 0;
+      let totalRevenue = 0;
+      let maxUnitProfit = 0;
+      let topServiceName = '-';
+      let pausedPlansCount = 0;
+
+      subscriptions.forEach(platform => {
+        platform.plans.forEach(plan => {
+          totalPlansCount++;
+          if (plan.period && plan.period.includes('شهر')) monthlyCount++;
+          if (plan.period && plan.period.includes('سنو')) yearlyCount++;
+          if (plan.status === 'paused') pausedPlansCount++;
+
+          const cost = Number(plan.cost) || 0;
+          const selling = Number(plan.sellingPrice) || 0;
+          const profit = selling - cost;
+
+          totalProfit += profit;
+          totalRevenue += selling;
+
+          if (profit > maxUnitProfit) {
+            maxUnitProfit = profit;
+            topServiceName = `${platform.platformName.split('(')[0].trim()} (${plan.planName})`;
+          }
+        });
+      });
+
+      const avgMargin = totalRevenue > 0 ? ((totalProfit / totalRevenue) * 100) : 0;
+
+      const cur = getActiveCurrency();
+      document.getElementById('kpiTotalCount').innerText = `${subscriptions.length} منصة`;
+      document.getElementById('kpiDurationBreakdown').innerText = `${totalPlansCount} باقة (${monthlyCount} شهري • ${yearlyCount} سنوي)`;
+
+      document.getElementById('kpiAvgMargin').innerText = `${avgMargin.toFixed(1)}%`;
+      document.getElementById('kpiPricedServices').innerText = `على ${totalPlansCount} باقة معتمدة`;
+
+      document.getElementById('kpiMaxProfit').innerText = maxUnitProfit > 0 ? formatCurrencyVal(maxUnitProfit) : '0';
+      const kpiCurr = document.getElementById('kpiCurrencySymbol');
+      if (kpiCurr) kpiCurr.innerText = cur.symbol;
+
+      document.getElementById('kpiTopService').innerText = topServiceName;
+
+      document.getElementById('kpiPausedCount').innerText = pausedPlansCount > 0 ? `${pausedPlansCount} موقوف` : 'جاهزة';
+      document.getElementById('kpiStatusDesc').innerText = pausedPlansCount > 0 ? `يوجد ${pausedPlansCount} باقات موقوفة حالياً` : 'كافة الباقات متوفرة للبيع';
+    }
+
+    function renderSubscriptions() {
+      updateKpiDashboard();
+      const container = document.getElementById('subscriptionsContainer');
+      const items = getFilteredAndSorted();
+      const cur = getActiveCurrency();
+
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div class="zaeem-card rounded-2xl text-center py-14 px-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-[#D4AF37] text-[#D4AF37] mx-auto flex items-center justify-center text-xl mb-3">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h4 class="text-base font-black mb-1 text-heading">لا توجد اشتراكات مطابقة</h4>
+            <p class="text-xs text-subtle max-w-sm mx-auto mb-4">جرّب تغيير كلمات البحث أو اختيار فلتر آخر.</p>
+            <button onclick="openModal()" class="glossy-btn">
+              <i class="fa-solid fa-plus"></i> إضافة اشتراك جديد
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      let html = '';
+
+      items.forEach(platform => {
+        const activeIdx = platform.activePlanIndex || 0;
+        const currentPlan = platform.plans[activeIdx] || platform.plans[0];
+
+        const cost = Number(currentPlan.cost) || 0;
+        const minPrice = Number(currentPlan.minPrice) || 0;
+        const selling = Number(currentPlan.sellingPrice) || 0;
+
+        const profit = computeProfit(cost, selling);
+        const margin = computeMarginPercent(cost, selling);
+        const minProfit = computeProfit(cost, minPrice);
+
+        const progressPct = selling > 0 ? Math.min(100, Math.max(8, Math.round((profit / selling) * 100))) : 0;
+        const isPaused = currentPlan.status === 'paused';
+
+        // Render Plan Tabs/Pills
+        const planPillsHtml = platform.plans.map((p, idx) => {
+          const isSelected = idx === activeIdx;
+          const isPPaused = p.status === 'paused';
+          const convertedSelling = formatCurrencyVal(p.sellingPrice);
+          return `
+            <button 
+              type="button" 
+              onclick="selectPlatformPlan('${platform.id}', ${idx})" 
+              class="plan-selector-pill ${isSelected ? 'active' : ''} ${isPPaused ? 'opacity-65' : ''}"
+              title="${p.notes || p.planName}"
+            >
+              <span>${p.planName}</span>
+              <span class="text-[10px] font-black opacity-90">${convertedSelling} ${cur.symbol}</span>
+              ${isPPaused ? '<span class="text-[9px] opacity-80">(موقوف)</span>' : ''}
+            </button>
+          `;
+        }).join('');
+
+        const convCost = formatCurrencyVal(cost);
+        const convMin = formatCurrencyVal(minPrice);
+        const convSelling = formatCurrencyVal(selling);
+        const convProfit = formatCurrencyVal(profit);
+        const convMinProfit = formatCurrencyVal(minProfit);
+
+        html += `
+          <div class="service-card-item p-4 sm:p-5 rounded-2xl flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 ${isPaused ? 'opacity-85' : ''}">
+            
+            <!-- Left Side in RTL: Actions & Profit Display (Pure Radiant Gold - NO GREEN) -->
+            <div class="flex items-center justify-between lg:justify-start gap-4 shrink-0 order-3 lg:order-1 pt-3 lg:pt-0 border-t lg:border-t-0 border-zinc-500/20">
+              
+              <!-- Buttons: نسخ للعميل، تعديل، حذف -->
+              <div class="flex flex-col gap-2">
+                <button 
+                  onclick="copyPitchForClient('${platform.id}')" 
+                  class="glossy-btn text-xs !py-2 !px-3 font-bold"
+                  title="نسخ عرض سعر رسمي للباقة المختارة للعميل بالعملة المحددة"
+                >
+                  <i class="fa-solid fa-share-nodes text-xs text-[#D4AF37]"></i>
+                  <span>نسخ للعميل</span>
+                </button>
+
+                <div class="flex items-center gap-1.5">
+                  <button 
+                    onclick="editSubscription('${platform.id}')" 
+                    class="glossy-btn glossy-btn-secondary text-xs !py-1.5 !px-3 font-bold flex-1"
+                    title="تعديل بيانات الباقة الحالية"
+                  >
+                    تعديل
+                  </button>
+
+                  <button 
+                    onclick="deleteSubscription('${platform.id}')" 
+                    class="glossy-btn glossy-btn-secondary text-xs text-zinc-400 hover:!text-red-400 !py-1.5 !px-3 font-bold"
+                    title="نقل المنصة إلى سلة المحذوفات"
+                  >
+                    حذف
+                  </button>
+                </div>
+              </div>
+
+              <!-- Profit & Margin (Pure Gold Display) -->
+              <div class="text-center min-w-[75px]">
+                <div class="flex items-baseline justify-center gap-1">
+                  <span class="text-2xl sm:text-3xl font-black text-[#D4AF37]">${convProfit}</span>
+                  <span class="text-xs font-black text-[#D4AF37]">${cur.symbol}</span>
+                </div>
+                <div class="text-[11.5px] font-bold text-subtle mt-0.5">
+                  هامش <span class="text-[#D4AF37] font-black">${margin.toFixed(1)}%</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Middle Section: Financial Pricing & Sub-Plan Selector -->
+            <div class="flex-1 max-w-lg my-1 lg:my-0 order-2">
+              
+              <!-- Plan Selector Toolbar inside card -->
+              <div class="flex flex-wrap items-center gap-1.5 mb-2.5">
+                <span class="text-[11px] font-black text-subtle ml-1">الباقة:</span>
+                ${planPillsHtml}
+              </div>
+
+              <!-- Financial Values (تكلفة الشراء، الحد الأدنى، سعر البيع بالعملة المحددة) -->
+              <div class="flex items-center justify-between text-xs sm:text-[13px] font-black mb-1.5">
+                <div>
+                  <span class="text-subtle font-semibold">تكلفة الشراء: </span>
+                  <span class="text-heading font-black">${convCost}</span> <span class="text-[10px] text-[#D4AF37]">${cur.symbol}</span>
+                </div>
+                <div>
+                  <span class="text-subtle font-semibold">الحد الأدنى: </span>
+                  <span class="text-heading font-black">${convMin}</span> <span class="text-[10px] text-[#D4AF37]">${cur.symbol}</span>
+                </div>
+                <div>
+                  <span class="text-[#D4AF37] font-semibold">سعر البيع: </span>
+                  <span class="text-[#D4AF37] text-sm sm:text-base font-black">${convSelling}</span> <span class="text-[10px] text-[#D4AF37]">${cur.symbol}</span>
+                </div>
+              </div>
+
+              <!-- Visual Progress Bar: Radiant Gold -->
+              <div class="w-full h-2 rounded-full zaeem-surface overflow-hidden relative border border-zinc-500/20">
+                <div 
+                  class="h-full rounded-full transition-all duration-500 gold-progress-bar" 
+                  style="width: ${progressPct}%"
+                ></div>
+              </div>
+
+              <!-- Sub-details: Min Profit & Status Notes -->
+              <div class="flex items-center justify-between mt-1 text-[11px] text-subtle font-bold">
+                <span>الربح عند الحد الأدنى: <strong class="text-[#D4AF37]">${convMinProfit} ${cur.symbol}</strong></span>
+                ${isPaused ? '<span class="text-zinc-400 font-bold">⛔ هذه الباقة موقوفة</span>' : '<span class="text-[#D4AF37] font-bold">✓ متوفرة ومضمونة</span>'}
+              </div>
+
+            </div>
+
+            <!-- Right Side in RTL: Brand Logo / Custom 1:1, Title & Details -->
+            <div class="flex items-center justify-end gap-3.5 flex-1 min-w-[260px] order-1 lg:order-3">
+              
+              <!-- Info Block (Title, Badges, Delivery) -->
+              <div class="text-right flex-1">
+                <div class="flex items-center gap-2">
+                  <h3 class="text-sm sm:text-base font-black text-heading leading-tight">
+                    ${platform.platformName}
+                  </h3>
+                  ${isPaused ? `
+                    <span class="px-2 py-0.5 rounded-md text-[10.5px] font-black bg-zinc-800 text-zinc-300 border border-zinc-600">
+                      موقوف
+                    </span>
+                  ` : ''}
+                </div>
+
+                <!-- Badges (Current Duration, Delivery) -->
+                <div class="flex flex-wrap items-center justify-start gap-1.5 mt-1.5 text-xs text-subtle font-semibold">
+                  <span class="px-2.5 py-0.5 rounded-lg border text-[11px] zaeem-surface font-bold text-[#D4AF37] border-[#D4AF37]/40">
+                    ${currentPlan.period || 'سنوي'}
+                  </span>
+                  ${currentPlan.delivery ? `
+                    <span class="px-2.5 py-0.5 rounded-lg border text-[11px] zaeem-surface font-semibold border-zinc-500/20">
+                      ${currentPlan.delivery}
+                    </span>
+                  ` : ''}
+                </div>
+
+                <!-- Guarantee / Notes Note -->
+                ${currentPlan.notes ? `
+                  <div class="text-[11.5px] text-subtle font-semibold mt-1">
+                    ${currentPlan.notes}
+                  </div>
+                ` : ''}
+              </div>
+
+              <!-- Platform Brand Logo / Custom 1:1 Image -->
+              <div>
+                ${getBrandIconHtml(platform.icon, platform.customIconUrl)}
+              </div>
+
+            </div>
+
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function calcModalLiveMargins() {
+      const cost = parseFloat(document.getElementById('subCost').value) || 0;
+      const minPrice = parseFloat(document.getElementById('subMinPrice').value) || 0;
+      const selling = parseFloat(document.getElementById('subSellingPrice').value) || 0;
+
+      const profit = computeProfit(cost, selling);
+      const margin = computeMarginPercent(cost, selling);
+      const minProfit = computeProfit(cost, minPrice);
+
+      document.getElementById('modalPreviewProfit').innerText = `${profit.toFixed(1)} ر.س`;
+      document.getElementById('modalPreviewMargin').innerText = `${margin.toFixed(1)}%`;
+      document.getElementById('modalPreviewMinProfit').innerText = `${minProfit.toFixed(1)} ر.س`;
+    }
+
+    function openModal() {
+      document.getElementById('editIndex').value = "-1";
+      document.getElementById('modalTitle').innerText = "إضافة اشتراك جديد";
+      document.getElementById('saveBtnText').innerText = "حفظ الاشتراك";
+      document.getElementById('modalIcon').className = "fa-solid fa-plus";
+      document.getElementById('subscriptionForm').reset();
+      document.getElementById('subStatusSelect').value = 'active';
+      removeCustomImage();
+      calcModalLiveMargins();
+
+      document.getElementById('subscriptionModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('subscriptionModal').classList.add('hidden');
+    }
+
+    function editSubscription(id) {
+      const platform = subscriptions.find(s => s.id === id);
+      if (!platform) return;
+
+      const plan = platform.plans[platform.activePlanIndex || 0] || platform.plans[0];
+
+      document.getElementById('editIndex').value = id;
+      document.getElementById('modalTitle').innerText = `تعديل باقة (${plan.planName}) في ${platform.platformName}`;
+      document.getElementById('saveBtnText').innerText = "تحديث البيانات";
+      document.getElementById('modalIcon').className = "fa-solid fa-pen";
+
+      document.getElementById('subName').value = platform.platformName;
+      document.getElementById('subIconSelect').value = platform.icon || 'generic';
+      document.getElementById('subPeriodType').value = plan.period || 'سنوي';
+      document.getElementById('subDeliveryType').value = plan.delivery || '';
+      document.getElementById('subCost').value = plan.cost;
+      document.getElementById('subMinPrice').value = plan.minPrice;
+      document.getElementById('subSellingPrice').value = plan.sellingPrice;
+      document.getElementById('subStatusSelect').value = plan.status || 'active';
+      document.getElementById('subSupplier').value = platform.supplier || '';
+      document.getElementById('subNotes').value = plan.notes || '';
+
+      if (platform.customIconUrl) {
+        setCustomImagePreview(platform.customIconUrl);
+      } else {
+        removeCustomImage();
+      }
+
+      calcModalLiveMargins();
+      document.getElementById('subscriptionModal').classList.remove('hidden');
+    }
+
+    // Confirmation Modal for Deletion (NO alert/confirm per instructions)
+    function deleteSubscription(id) {
+      const platform = subscriptions.find(s => s.id === id);
+      if (!platform) return;
+
+      deleteTargetId = id;
+      const msgEl = document.getElementById('confirmDeleteMessage');
+      if (msgEl) {
+        msgEl.innerText = `هل أنت متأكد من رغبتك في نقل منصة "${platform.platformName}" إلى سلة المحذوفات؟`;
+      }
+
+      const modal = document.getElementById('confirmDeleteModal');
+      if (modal) modal.classList.remove('hidden');
+
+      const confirmBtn = document.getElementById('confirmDeleteBtn');
+      if (confirmBtn) {
+        confirmBtn.onclick = function() {
+          executeDeleteToTrash(deleteTargetId);
+          closeConfirmDeleteModal();
+        };
+      }
+    }
+
+    function closeConfirmDeleteModal() {
+      deleteTargetId = null;
+      const modal = document.getElementById('confirmDeleteModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function executeDeleteToTrash(id) {
+      const idx = subscriptions.findIndex(s => s.id === id);
+      if (idx !== -1) {
+        const deletedItem = subscriptions.splice(idx, 1)[0];
+        deletedItem.deletedAt = Date.now();
+        trashBin.unshift(deletedItem);
+
+        addActivityLog(
+          `نقل منصة "${deletedItem.platformName}" إلى سلة المحذوفات`,
+          `تم الحذف وتخزينها في المحذوفات مع كافة باقاتها وتفاصيلها.`
+        );
+
+        saveSubscriptions();
+        renderSubscriptions();
+        showToast(`✓ تم نقل (${deletedItem.platformName}) إلى سلة المحذوفات`);
+      }
+    }
+
+    function restoreSubscriptionFromTrash(trashId) {
+      const idx = trashBin.findIndex(t => t.id === trashId);
+      if (idx !== -1) {
+        const restored = trashBin.splice(idx, 1)[0];
+        delete restored.deletedAt;
+        subscriptions.unshift(restored);
+
+        addActivityLog(
+          `استعادة منصة "${restored.platformName}" من سلة المحذوفات`,
+          `تمت استعادة المنصة بنجاح وإعادتها لقائمة الاشتراكات المتاحة.`
+        );
+
+        saveSubscriptions();
+        renderSubscriptions();
+        renderTrashModalContent();
+        showToast(`✓ تمت استعادة (${restored.platformName}) بنجاح`);
+      }
+    }
+
+    function permanentDeleteFromTrash(trashId) {
+      const idx = trashBin.findIndex(t => t.id === trashId);
+      if (idx !== -1) {
+        const removed = trashBin.splice(idx, 1)[0];
+        addActivityLog(
+          `حذف نهائي لمنصة "${removed.platformName}" من سلة المحذوفات`,
+          `تم الحذف النهائي من النظام بشكل لا يمكن استرجاعه.`
+        );
+        saveSubscriptions();
+        renderTrashModalContent();
+        showToast(`✓ تم الحذف النهائي لمنصة (${removed.platformName})`);
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const editId = document.getElementById('editIndex').value;
+
+      const nameInput = document.getElementById('subName').value.trim();
+      const iconInput = document.getElementById('subIconSelect').value;
+      const customImgInput = document.getElementById('customImageData').value || null;
+      const periodInput = document.getElementById('subPeriodType').value;
+      const deliveryInput = document.getElementById('subDeliveryType').value.trim();
+      const costInput = parseFloat(document.getElementById('subCost').value) || 0;
+      const minPriceInput = parseFloat(document.getElementById('subMinPrice').value) || 0;
+      const sellingInput = parseFloat(document.getElementById('subSellingPrice').value) || 0;
+      const statusInput = document.getElementById('subStatusSelect').value;
+      const supplierInput = document.getElementById('subSupplier').value.trim();
+      const notesInput = document.getElementById('subNotes').value.trim();
+
+      if (editId === "-1") {
+        const newPlatform = {
+          id: Date.now().toString(),
+          platformName: nameInput,
+          icon: iconInput,
+          customIconUrl: customImgInput,
+          supplier: supplierInput,
+          activePlanIndex: 0,
+          plans: [
+            {
+              planName: periodInput,
+              period: periodInput,
+              delivery: deliveryInput,
+              cost: costInput,
+              minPrice: minPriceInput,
+              sellingPrice: sellingInput,
+              status: statusInput,
+              notes: notesInput
+            }
+          ]
+        };
+        subscriptions.unshift(newPlatform);
+        addActivityLog(
+          `إضافة منصة جديدة: "${nameInput}"`,
+          `السعر: ${sellingInput} ر.س | التكلفة: ${costInput} ر.س | الدورة: ${periodInput}`
+        );
+        showToast('✓ تمت إضافة المنصة وحفظها تلقائياً');
+      } else {
+        const platform = subscriptions.find(s => s.id === editId);
+        if (platform) {
+          const oldName = platform.platformName;
+          platform.platformName = nameInput;
+          platform.icon = iconInput;
+          platform.customIconUrl = customImgInput;
+          platform.supplier = supplierInput;
+          const plan = platform.plans[platform.activePlanIndex || 0];
+          if (plan) {
+            const oldPrice = plan.sellingPrice;
+            plan.period = periodInput;
+            plan.delivery = deliveryInput;
+            plan.cost = costInput;
+            plan.minPrice = minPriceInput;
+            plan.sellingPrice = sellingInput;
+            plan.status = statusInput;
+            plan.notes = notesInput;
+
+            addActivityLog(
+              `تعديل باقة (${plan.planName}) في "${nameInput}"`,
+              `تم تحديث السعر من ${oldPrice} إلى ${sellingInput} ر.س | التكلفة: ${costInput} ر.س`
+            );
+          }
+          showToast('✓ تم حفظ وتحديث التعديل تلقائياً');
+        }
+      }
+
+      saveSubscriptions();
+      closeModal();
+      renderSubscriptions();
+    }
+
+    function openLogsModal() {
+      pruneActivityLogs();
+      renderLogsModalContent();
+      document.getElementById('logsModal').classList.remove('hidden');
+    }
+
+    function closeLogsModal() {
+      document.getElementById('logsModal').classList.add('hidden');
+    }
+
+    function setLogViewTab(tab) {
+      currentLogTab = tab;
+      document.getElementById('logTabActive').classList.toggle('active', tab === 'active');
+      document.getElementById('logTabArchive').classList.toggle('active', tab === 'archive');
+      renderLogsModalContent();
+    }
+
+    function renderLogsModalContent() {
+      const container = document.getElementById('logsContainer');
+      const now = Date.now();
+      const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
+
+      const filteredLogs = activityLogs.filter(log => {
+        const age = now - log.timestamp;
+        if (currentLogTab === 'active') {
+          return age <= SEVEN_DAYS;
+        } else {
+          return age > SEVEN_DAYS;
+        }
+      });
+
+      if (filteredLogs.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-10 zaeem-surface rounded-xl border border-zinc-500/20 p-6">
+            <i class="fa-solid fa-clock-rotate-left text-2xl text-subtle mb-2"></i>
+            <h5 class="text-xs font-black text-heading">لا توجد تحديثات في هذا القسم</h5>
+            <p class="text-[11px] text-subtle mt-1">تظهر هنا التحديثات المجدولة تلقائياً بتوقيت مصر.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filteredLogs.map(log => `
+        <div class="p-3 rounded-xl zaeem-surface border border-zinc-500/20 hover:border-[#D4AF37]/50 transition text-right">
+          <div class="flex items-center justify-between gap-2 mb-1 flex-wrap">
+            <span class="text-xs font-black text-heading flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span>
+              ${log.summary}
+            </span>
+            <span class="text-[10.5px] font-bold text-[#D4AF37] zaeem-card px-2 py-0.5 rounded-md border border-[#D4AF37]/30">
+              <i class="fa-regular fa-clock ml-1 text-[10px]"></i> ${formatEgyptDateTime(log.timestamp)}
+            </span>
+          </div>
+          ${log.details ? `<p class="text-[11.5px] text-subtle font-semibold">${log.details}</p>` : ''}
+        </div>
+      `).join('');
+    }
+
+    function clearArchiveLogs() {
+      const now = Date.now();
+      const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
+      activityLogs = activityLogs.filter(log => (now - log.timestamp) <= SEVEN_DAYS);
+      saveSubscriptions();
+      renderLogsModalContent();
+      showToast("✓ تم تنظيف الأرشيف");
+    }
+
+    // Trash Modal Rendering
+    function openTrashModal() {
+      pruneActivityLogs();
+      renderTrashModalContent();
+      document.getElementById('trashModal').classList.remove('hidden');
+    }
+
+    function closeTrashModal() {
+      document.getElementById('trashModal').classList.add('hidden');
+    }
+
+    function renderTrashModalContent() {
+      const container = document.getElementById('trashItemsContainer');
+      if (trashBin.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 zaeem-surface rounded-xl border border-zinc-500/20 p-6">
+            <i class="fa-solid fa-trash-can text-3xl text-subtle mb-2"></i>
+            <h5 class="text-xs font-black text-heading">سلة المحذوفات فارغة</h5>
+            <p class="text-[11px] text-subtle mt-1">أي اشتراك يتم حذفه سيبقى هنا لمدة 30 يوماً مع إمكانية استعادته.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = trashBin.map(item => `
+        <div class="p-3.5 rounded-xl zaeem-surface border border-zinc-500/20 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 text-right">
+          <div class="flex items-center gap-3">
+            <div>${getBrandIconHtml(item.icon, item.customIconUrl)}</div>
+            <div>
+              <h4 class="text-xs sm:text-sm font-black text-heading">${item.platformName}</h4>
+              <div class="text-[11px] text-subtle font-semibold mt-0.5">
+                حذف في: <span class="text-[#D4AF37] font-bold">${formatEgyptDateTime(item.deletedAt)}</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-end gap-2 shrink-0">
+            <button onclick="restoreSubscriptionFromTrash('${item.id}')" class="glossy-btn text-xs !py-1.5 !px-3 font-bold" title="استعادة الاشتراك">
+              <i class="fa-solid fa-rotate-left text-[#D4AF37]"></i>
+              <span>استعادة</span>
+            </button>
+            <button onclick="permanentDeleteFromTrash('${item.id}')" class="glossy-btn glossy-btn-secondary text-xs text-red-400 hover:!text-red-200 !py-1.5 !px-3 font-bold" title="حذف نهائي">
+              <i class="fa-solid fa-xmark"></i>
+              <span>حذف نهائي</span>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function copyPitchForClient(platformId) {
+      const platform = subscriptions.find(s => s.id === platformId);
+      if (!platform) return;
+
+      const activePlan = platform.plans[platform.activePlanIndex || 0] || platform.plans[0];
+      const cur = getActiveCurrency();
+
+      let otherPlansText = '';
+      if (platform.plans.length > 1) {
+        otherPlansText = `\n📋 الباقات الأخرى المتاحة لهذه المنصة:\n` + platform.plans
+          .filter((_, i) => i !== (platform.activePlanIndex || 0))
+          .map(p => `• ${p.planName}: ${formatCurrencyVal(p.sellingPrice)} ${cur.name} (${cur.symbol}) [${p.period}]${p.status === 'paused' ? ' - موقوف حالياً' : ''}`)
+          .join('\n');
+      }
+
+      const formattedActivePrice = formatCurrencyVal(activePlan.sellingPrice);
+      const message = `مرحباً بك! ✨\nعرض حصري ومعتمد من شركة الزعيم:\n\n📌 المنصة: ${platform.platformName}\n🔹 الباقة المختارة: ${activePlan.planName} (${activePlan.period})\n💰 السعر: ${formattedActivePrice} ${cur.name} (${cur.symbol})\n${activePlan.delivery ? `🔹 طريقة التفعيل: ${activePlan.delivery}\n` : ''}${activePlan.notes ? `🔹 التفاصيل: ${activePlan.notes}\n` : ''}${otherPlansText}\n\n🛡️ الضمان: جميع الاشتراكات تشمل ضمان كامل فترة الاشتراك ونحن نتحمل أي تقصير بإذن الله.\n\nللتفعيل الفوري نسعد دائماً بخدمتكم! 🚀`;
+
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = message;
+      document.body.appendChild(tempTextArea);
+      tempTextArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempTextArea);
+
+      showToast(`✓ تم نسخ عرض سعر (${platform.platformName} - ${activePlan.planName}) بـ ${cur.name}`);
+    }
+
+    function exportToCSV() {
+      const cur = getActiveCurrency();
+      let csv = "\uFEFF";
+      csv += `المنصة,اسم الباقة,الدورة,التسليم,المورد,الحالة,التكلفة (${cur.symbol}),الحد الأدنى (${cur.symbol}),سعر البيع (${cur.symbol}),صافي الربح (${cur.symbol}),هامش الربح %,الملاحظات\n`;
+
+      subscriptions.forEach(platform => {
+        platform.plans.forEach(plan => {
+          const cost = Number(plan.cost) || 0;
+          const selling = Number(plan.sellingPrice) || 0;
+          const profit = selling - cost;
+          const margin = selling > 0 ? ((profit / selling) * 100).toFixed(1) : '0';
+          const statusLabel = plan.status === 'paused' ? 'موقوف حالياً' : 'متوفر ومتاح';
+
+          const cCost = formatCurrencyVal(cost);
+          const cMin = formatCurrencyVal(plan.minPrice || 0);
+          const cSelling = formatCurrencyVal(selling);
+          const cProfit = formatCurrencyVal(profit);
+
+          csv += `"${platform.platformName}","${plan.planName}","${plan.period || ''}","${plan.delivery || ''}","${platform.supplier || ''}","${statusLabel}",${cCost},${cMin},${cSelling},${cProfit},${margin}%,"${plan.notes || ''}"\n`;
+        });
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `أسعار_اشتراكات_شركة_الزعيم_${cur.code}_${new Date().toISOString().slice(0, 10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast(`✓ تم تصدير جدول الأسعار بعملة (${cur.name}) كملف إكسيل بنجاح`);
+    }
+
+    /* KPI Detail Modal Controller */
+    function openKpiDetailModal(type) {
+      const modal = document.getElementById('kpiDetailModal');
+      const titleEl = document.getElementById('kpiModalTitle');
+      const subtitleEl = document.getElementById('kpiModalSubtitle');
+      const iconEl = document.getElementById('kpiModalIcon');
+      const bodyEl = document.getElementById('kpiModalBody');
+      const cur = getActiveCurrency();
+
+      if (!modal || !bodyEl) return;
+
+      if (type === 'count') {
+        iconEl.className = 'fa-solid fa-boxes-stacked';
+        titleEl.innerText = 'تقرير توزيع وحجم الاشتراكات';
+        subtitleEl.innerText = `إجمالي ${subscriptions.length} منصة تغطي مختلف المجالات الرقمية`;
+
+        let totalPackages = 0;
+        let monthly = 0, yearly = 0, fourMonths = 0, lifetime = 0, other = 0;
+        
+        subscriptions.forEach(s => {
+          s.plans.forEach(p => {
+            totalPackages++;
+            const per = (p.period || '').toLowerCase();
+            if (per.includes('شهر') && !per.includes('4')) monthly++;
+            else if (per.includes('4 شهر')) fourMonths++;
+            else if (per.includes('سنو')) yearly++;
+            else if (per.includes('حياة') || per.includes('مدى')) lifetime++;
+            else other++;
+          });
+        });
+
+        bodyEl.innerHTML = `
+          <!-- Summary Cards Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            <div class="p-3 rounded-xl zaeem-surface border border-zinc-500/20 text-center">
+              <span class="text-[11px] text-subtle font-bold">إجمالي المنصات</span>
+              <div class="text-xl font-black text-heading mt-1">${subscriptions.length}</div>
+            </div>
+            <div class="p-3 rounded-xl zaeem-surface border border-zinc-500/20 text-center">
+              <span class="text-[11px] text-subtle font-bold">إجمالي الباقات</span>
+              <div class="text-xl font-black text-[#D4AF37] mt-1">${totalPackages}</div>
+            </div>
+            <div class="p-3 rounded-xl zaeem-surface border border-zinc-500/20 text-center">
+              <span class="text-[11px] text-subtle font-bold">الباقات السنوية</span>
+              <div class="text-xl font-black text-heading mt-1">${yearly}</div>
+            </div>
+            <div class="p-3 rounded-xl zaeem-surface border border-zinc-500/20 text-center">
+              <span class="text-[11px] text-subtle font-bold">الباقات الشهرية</span>
+              <div class="text-xl font-black text-heading mt-1">${monthly}</div>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl zaeem-surface border border-[#D4AF37]/30 text-xs font-bold text-subtle flex items-center justify-between">
+            <span>توزيع الفترات الأخرى: <strong>${fourMonths} باقات 4 شهور</strong> • <strong>${lifetime} مدى الحياة</strong></span>
+            <span class="text-[#D4AF37]">الكتالوج محدث</span>
+          </div>
+
+          <!-- Platform Packages Breakdown List -->
+          <div class="space-y-2 pt-1">
+            <h4 class="text-xs font-black text-heading mb-2">توزيع الباقات حسب كل منصة:</h4>
+            ${subscriptions.map(s => `
+              <div class="p-3 rounded-xl zaeem-surface border border-zinc-500/20 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+                  <div>
+                    <h5 class="text-xs font-black text-heading">${s.platformName}</h5>
+                    <span class="text-[10.5px] text-subtle">${s.plans.length} باقة (${s.plans.map(p => p.planName).join(' ، ')})</span>
+                  </div>
+                </div>
+                <div class="text-left shrink-0">
+                  <span class="text-xs font-black text-[#D4AF37]">${formatCurrencyVal(s.plans[0].sellingPrice)} ${cur.symbol}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      } else if (type === 'margin') {
+        iconEl.className = 'fa-solid fa-percent';
+        titleEl.innerText = 'التحليل المالي وهوامش الأرباح';
+        subtitleEl.innerText = `حساب دقيق لمتوسط الهوامش وعوائد رأس المال بالـ (${cur.name})`;
+
+        let totalCatalogCost = 0;
+        let totalCatalogSelling = 0;
+        let totalCatalogProfit = 0;
+        let packagesWithProfit = 0;
+        let highMarginCount = 0;
+
+        subscriptions.forEach(s => {
+          s.plans.forEach(p => {
+            const c = Number(p.cost) || 0;
+            const sp = Number(p.sellingPrice) || 0;
+            const pr = sp - c;
+            const mg = sp > 0 ? (pr / sp) * 100 : 0;
+            totalCatalogCost += c;
+            totalCatalogSelling += sp;
+            totalCatalogProfit += pr;
+            packagesWithProfit++;
+            if (mg >= 40) highMarginCount++;
+          });
+        });
+
+        const overallMargin = totalCatalogSelling > 0 ? ((totalCatalogProfit / totalCatalogSelling) * 100) : 0;
+
+        bodyEl.innerHTML = `
+          <!-- Financial KPIs -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="p-3.5 rounded-xl zaeem-surface border border-zinc-500/20 text-center">
+              <span class="text-[11px] text-subtle font-bold">إجمالي تكاليف الكتالوج</span>
+              <div class="text-lg font-black text-heading mt-1">${formatCurrencyVal(totalCatalogCost)} ${cur.symbol}</div>
+            </div>
+            <div class="p-3.5 rounded-xl zaeem-surface border border-zinc-500/20 text-center">
+              <span class="text-[11px] text-subtle font-bold">إجمالي القيمة البيعية</span>
+              <div class="text-lg font-black text-heading mt-1">${formatCurrencyVal(totalCatalogSelling)} ${cur.symbol}</div>
+            </div>
+            <div class="p-3.5 rounded-xl zaeem-surface border border-[#D4AF37]/50 text-center">
+              <span class="text-[11px] text-[#D4AF37] font-bold">صافي الربح الإجمالي</span>
+              <div class="text-lg font-black text-[#D4AF37] mt-1">${formatCurrencyVal(totalCatalogProfit)} ${cur.symbol}</div>
+            </div>
+          </div>
+
+          <!-- Margin Highlight Box -->
+          <div class="p-4 rounded-xl zaeem-surface border border-[#D4AF37]/40 flex items-center justify-between gap-3">
+            <div>
+              <h5 class="text-xs font-black text-heading">متوسط هامش الربح لجميع الخدمات</h5>
+              <p class="text-[11px] text-subtle mt-0.5">يوجد <span class="text-[#D4AF37] font-black">${highMarginCount}</span> باقة تتجاوز نسبة ربحيتها 40%، مما يمنح الشركة استقراراً ومردوداً عالي الجودة.</p>
+            </div>
+            <div class="text-2xl font-black text-[#D4AF37] shrink-0">
+              ${overallMargin.toFixed(1)}%
+            </div>
+          </div>
+
+          <!-- Top Margins Platforms Ranking -->
+          <div class="space-y-2 pt-1">
+            <h4 class="text-xs font-black text-heading mb-2">أعلى الباقات في نسبة هامش الربح (%):</h4>
+            ${(() => {
+              const allPlans = [];
+              subscriptions.forEach(s => {
+                s.plans.forEach(p => {
+                  const c = Number(p.cost) || 0;
+                  const sp = Number(p.sellingPrice) || 0;
+                  const mg = sp > 0 ? ((sp - c) / sp) * 100 : 0;
+                  allPlans.push({ platform: s.platformName, plan: p.planName, cost: c, selling: sp, margin: mg, profit: (sp - c) });
+                });
+              });
+              allPlans.sort((a, b) => b.margin - a.margin);
+              return allPlans.slice(0, 5).map((item, idx) => `
+                <div class="p-3 rounded-xl zaeem-surface border border-zinc-500/20 flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-5 h-5 rounded-full zaeem-card border border-[#D4AF37]/40 flex items-center justify-center text-[10px] font-black text-[#D4AF37]">
+                      ${idx + 1}
+                    </span>
+                    <div>
+                      <h5 class="text-xs font-black text-heading">${item.platform} - ${item.plan}</h5>
+                      <span class="text-[10.5px] text-subtle">البيع: ${formatCurrencyVal(item.selling)} ${cur.symbol} | التكلفة: ${formatCurrencyVal(item.cost)} ${cur.symbol}</span>
+                    </div>
+                  </div>
+                  <div class="text-left shrink-0">
+                    <span class="text-xs font-black text-[#D4AF37]">${item.margin.toFixed(1)}%</span>
+                    <div class="text-[10px] text-subtle font-semibold">+${formatCurrencyVal(item.profit)} ${cur.symbol}</div>
+                  </div>
+                </div>
+              `).join('');
+            })()}
+          </div>
+        `;
+      } else if (type === 'profit') {
+        iconEl.className = 'fa-solid fa-trophy';
+        titleEl.innerText = 'لوحة شرف أعلى الأرباح للوحدة';
+        subtitleEl.innerText = `ترتيب أكثر الباقات ربحية بقيمتها النقدية الفعلية بالـ (${cur.name})`;
+
+        const allPlans = [];
+        subscriptions.forEach(s => {
+          s.plans.forEach(p => {
+            const c = Number(p.cost) || 0;
+            const sp = Number(p.sellingPrice) || 0;
+            const pr = sp - c;
+            const mg = sp > 0 ? ((pr / sp) * 100) : 0;
+            allPlans.push({
+              platformId: s.id,
+              platform: s.platformName,
+              plan: p.planName,
+              period: p.period,
+              cost: c,
+              selling: sp,
+              profit: pr,
+              margin: mg,
+              status: p.status
+            });
+          });
+        });
+
+        allPlans.sort((a, b) => b.profit - a.profit);
+        const topPlans = allPlans.slice(0, 6);
+
+        bodyEl.innerHTML = `
+          <div class="p-3 rounded-xl zaeem-surface border border-[#D4AF37]/30 text-xs text-subtle font-semibold leading-relaxed">
+            توضح هذه القائمة الباقات التي تحقق أعلى مكسب نقدي مباشر للعملية الواحدة لدعم خطط الترويج والعروض التسويقية.
+          </div>
+
+          <div class="space-y-2.5 pt-1">
+            ${topPlans.map((item, idx) => `
+              <div class="p-3.5 rounded-xl zaeem-surface border border-zinc-500/20 hover:border-[#D4AF37]/50 transition flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-xl bg-black/40 border border-[#D4AF37]/40 flex items-center justify-center font-black text-xs text-[#D4AF37]">
+                    #${idx + 1}
+                  </div>
+                  <div>
+                    <h4 class="text-xs sm:text-sm font-black text-heading">${item.platform}</h4>
+                    <div class="flex items-center gap-2 mt-0.5 text-[11px] text-subtle font-semibold">
+                      <span class="text-[#D4AF37] font-bold">${item.plan}</span>
+                      <span>•</span>
+                      <span>سعر البيع: ${formatCurrencyVal(item.selling)} ${cur.symbol}</span>
+                      <span>•</span>
+                      <span>التكلفة: ${formatCurrencyVal(item.cost)} ${cur.symbol}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-left shrink-0">
+                  <div class="text-sm sm:text-base font-black text-[#D4AF37]">
+                    +${formatCurrencyVal(item.profit)} ${cur.symbol}
+                  </div>
+                  <div class="text-[10.5px] font-bold text-subtle">
+                    هامش ${item.margin.toFixed(1)}%
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      } else if (type === 'status') {
+        iconEl.className = 'fa-solid fa-circle-check';
+        titleEl.innerText = 'تقرير حالة توفر الباقات والاشتراكات';
+        subtitleEl.innerText = 'متابعة الخدمات المتاحة للبيع الفوري والخدمات الموقوفة حالياً';
+
+        const pausedPlans = [];
+        const activePlans = [];
+
+        subscriptions.forEach(s => {
+          s.plans.forEach(p => {
+            const item = { platform: s.platformName, plan: p.planName, period: p.period, price: p.sellingPrice, notes: p.notes };
+            if (p.status === 'paused') pausedPlans.push(item);
+            else activePlans.push(item);
+          });
+        });
+
+        bodyEl.innerHTML = `
+          <!-- Status Counters -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-3.5 rounded-xl zaeem-surface border border-[#D4AF37]/40 text-center">
+              <span class="text-xs text-[#D4AF37] font-bold">باقات متوفرة وجاهزة للبيع</span>
+              <div class="text-2xl font-black text-heading mt-1">${activePlans.length} باقة</div>
+            </div>
+            <div class="p-3.5 rounded-xl zaeem-surface border border-zinc-500/20 text-center">
+              <span class="text-xs text-subtle font-bold">باقات موقوفة حالياً</span>
+              <div class="text-2xl font-black text-heading mt-1">${pausedPlans.length} باقة</div>
+            </div>
+          </div>
+
+          <!-- Paused Services Section -->
+          ${pausedPlans.length > 0 ? `
+            <div class="space-y-2 pt-2">
+              <h4 class="text-xs font-black text-heading flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-zinc-400"></span>
+                قائمة الباقات الموقوفة مؤقتاً:
+              </h4>
+              ${pausedPlans.map(p => `
+                <div class="p-3 rounded-xl zaeem-surface border border-zinc-500/20 flex items-center justify-between gap-3">
+                  <div>
+                    <h5 class="text-xs font-black text-heading">${p.platform} (${p.plan})</h5>
+                    <p class="text-[11px] text-subtle mt-0.5">${p.notes || '⛔ موقوف حالياً'}</p>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-lg text-[10.5px] font-black bg-zinc-800 text-zinc-300 border border-zinc-600">
+                    موقوف
+                  </span>
+                </div>
+              `).join('')}
+            </div>
+          ` : `
+            <div class="p-4 rounded-xl zaeem-surface text-center text-xs font-bold text-[#D4AF37]">
+              ✓ جميع الباقات والخدمات متوفرة ومتاحة للبيع الفوري بالكامل!
+            </div>
+          `}
+        `;
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeKpiDetailModal() {
+      const modal = document.getElementById('kpiDetailModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function showToast(msg) {
+      const box = document.getElementById('toastBox');
+      const msgEl = document.getElementById('toastMsg');
+      if (!box || !msgEl) return;
+      msgEl.innerText = msg;
+
+      box.classList.remove('hidden');
+      box.classList.add('flex');
+
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        box.classList.add('hidden');
+        box.classList.remove('flex');
+      }, 3000);
+    }
+
+    window.onload = function() {
+      initializeApp();
+    };
+  </script>
+</body>
+</html>
